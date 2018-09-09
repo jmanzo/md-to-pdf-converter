@@ -2,6 +2,7 @@ var fs = require('fs'),
     path = require('path'),
     md = require("markdown").markdown,
     markdownpdf = require("markdown-pdf"),
+    markdownInclude = require('markdown-include'),
     filePath = path.join(__dirname, 'SUMMARY.md');
 
 fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
@@ -13,13 +14,12 @@ fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
 });
 
 function parsingMD(data) {
-	var look = data.split(/\n/);
-	var re = /\(([^)]+)\)/;
-	var reBrackets = /\[([^)]+)\]/;
+	var look = data.split(/\n/),
+		re = /\(([^)]+)\)/,
+		reBrackets = /\[([^)]+)\]/;
 
 	for (var i = 0; i < look.length; i++) {
 		var replacement = re.exec(look[i]);
-		var replaceBrackets = reBrackets.exec(look[i]);
 		
 		if (replacement) {
 			look[i] = look[i].replace(re, '#include "' + replacement[1] + '"');
@@ -32,9 +32,21 @@ function parsingMD(data) {
 
 function stringToMD(data) {
 	var outputPath = "SUMMARY.pdf",
-		output = data.toString().replace(/,/g, '\n');
+		output = data.toString().replace(/,/g, '\n');	
 
-	markdownpdf().from.string(output).to(outputPath, function () {
+	fs.writeFile("_SUMMARY.md", output, function(err) {
+	    if(err) {
+	        return console.log(err);
+	    }
+
+	    console.log("- Temporary .md file was created! -");
+	});
+}
+
+function stringToPdf(data){
+	var outputPath = "SUMMARY.pdf";
+
+	markdownpdf().from.string(data).to(outputPath, function () {
 	  console.log("Created", outputPath)
 	})
 }
