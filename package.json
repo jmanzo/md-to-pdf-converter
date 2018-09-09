@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/alexnl/pharma-dev#readme",
   "dependencies": {
+    "markdown": "^0.5.0",
+    "markdown-include": "^0.4.3",
     "markdown-pdf": "^9.0.0"
   }
 }
