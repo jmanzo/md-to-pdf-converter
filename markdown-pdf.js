@@ -8,6 +8,8 @@ var fs = require('fs'),
 fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
     if (!err) {
         parsingMD(data);
+        compilingFiles();
+        stringToPdf();
     } else {
         console.log(err);
     }
@@ -24,6 +26,8 @@ function parsingMD(data) {
 		if (replacement) {
 			look[i] = look[i].replace(re, '#include "' + replacement[1] + '"');
 			look[i] = look[i].replace(reBrackets, '');
+			look[i] = look[i].replace('*', '');
+			look[i] = look[i].trim();
 		}
 	}
 
@@ -43,10 +47,17 @@ function stringToMD(data) {
 	});
 }
 
-function stringToPdf(data){
-	var outputPath = "SUMMARY.pdf";
+function compilingFiles(){
+	markdownInclude.compileFiles("markdown.json").then(function (data) {
+		console.log('- File compiled! -');
+	});
+}
 
-	markdownpdf().from.string(data).to(outputPath, function () {
-	  console.log("Created", outputPath)
+function stringToPdf(){
+	var outputPath = "SUMMARY.pdf",
+		inputPath = "TEMP.md";
+
+	markdownpdf().from(inputPath).to(outputPath, function () {
+	  console.log("- PDF Created -", outputPath)
 	})
 }
