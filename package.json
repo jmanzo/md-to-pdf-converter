@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/alexnl/pharma-dev#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "duplexer": "^0.1.1",
     "markdown": "^0.5.0",
     "markdown-include": "^0.4.3",
-    "markdown-pdf": "^9.0.0"
+    "markdown-pdf": "^9.0.0",
+    "split": "^1.0.1",
+    "through": "^2.3.8"
   }
 }
