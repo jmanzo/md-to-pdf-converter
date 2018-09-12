@@ -1,14 +1,7 @@
 var fs = require('fs'),
     path = require('path'),
-    through = require('through'),
-    cheerio = require('cheerio'),
-    md = require("markdown").markdown,
     markdownpdf = require("markdown-pdf"),
-    markdownInclude = require('markdown-include'),
-    split = require("split"),
-    duplexer = require("duplexer"),
-    filePath = path.join(__dirname, 'SUMMARY.md'),
-    imgBasePath = __dirname;
+    filePath = path.join(__dirname, 'SUMMARY.md');
 
 fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
     if (!err) {
@@ -46,6 +39,7 @@ function parsingMD(data) {
 				  }
 
 				  var result = data.replace(reImg, function(whole, a, b, c){
+				  	b = b.replace('../', '');
 				  	return a + path.resolve(__dirname, b) + c;
 				  });
 
