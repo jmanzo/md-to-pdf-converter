@@ -1,7 +1,7 @@
 var fs = require('fs'),
     path = require('path'),
     markdownpdf = require("markdown-pdf"),
-    filePath = path.join(__dirname, 'SUMMARY.md');
+    filePath = path.join(__dirname, './output/SUMMARY.md');
 
 fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
     if (!err) {
@@ -16,7 +16,7 @@ function parsingMD(data) {
 		re = /\(([^)]+)\)/,
 		reBrackets = /\[([^)]+)\]/,
 		mdDocs = new Array(),
-		bookPath = 'SUMMARY.pdf',
+		bookPath = './output/SUMMARY.pdf',
 		replaceLink;
 
 	for (var i = 0; i < look.length; i++) {
