@@ -27,7 +27,7 @@ Please note that the volume of fat tissue is not optimized by the algorithm as t
 A dialog will pop up in which the properties of the individual can be specified. First, new individuals are initialized by giving them a **Name** in the respective input field. These names are then used to identify them when their properties are saved in the project and/or as templates. In addition, names are used for identification of individuals in the simulation. Second, the properties of individuals can be set or changed:
 
 ![The Create Individual dialog. Here, the properties of a non-standard
-European individual are shown.](images/PKSim_Individuals_NewIndividual.png)
+European individual are shown.](../assets/images/part-3/PKSim_Individuals_NewIndividual.png)
 
 The **Create Individual** building block window is subdivided into three tabs: **Biometrics, Anatomy & Physiology**, and **Expression**.
 
@@ -83,7 +83,7 @@ If as a special human population **Preterm** is selected, an additional age scal
 
 ![Postnatal growth curves for preterm infants pooled into different weight
 classes up to two years (black solid lines) compared to term born infants matched to the
-growth charts of the “Centers for Disease Control and Prevention” (CDC, shaded area).](images/PretermModel_Growth_Weight.png)
+growth charts of the “Centers for Disease Control and Prevention” (CDC, shaded area).](../assets/images/part-3/PretermModel_Growth_Weight.png)
 
 {% hint style="warning" %}
 Oral administration to preterm neonates is, so far, not possible in PK- Sim®. The parameters relevant to oral administration are all set to "0" so that the fraction of dose absorbed and, in addition, the distribution of drugs into the mucosa irrespective of the administration route are disabled.
@@ -124,9 +124,9 @@ Irrespective of the species chosen, the **Calculation Method** for the estimatio
     
 Literature for capillary surface areas for the different organs and species is rather limited. Therefore, PK-Sim® provides two heuristics to estimate the capillary surface area of the organs, which can be selected from the drop-down menu
 
-1.  **Organ vascularization (default method)**. The capillary surface area (SA) is estimated by ![Image](images/sa-k.png) , with the constant of proportionality k, the fraction of vascular space of an organ ![Image](images/fvas-organ.png), and the organ volume ![Image](images/vorgan.png). The idea behind this heuristics is the following: with the assumption that the morphology of the vascular tree is similar in each organ, the specific surface area per organ volume can be estimated by the capillary density of an organ, which in turn can be estimated by the fraction of vascular space of an organ.
+1.  **Organ vascularization (default method)**. The capillary surface area (SA) is estimated by ![Image](../assets/images/part-3/sa-k.png) , with the constant of proportionality k, the fraction of vascular space of an organ ![Image](../assets/images/part-3/fvas-organ.png), and the organ volume ![Image](../assets/images/part-3/vorgan.png). The idea behind this heuristics is the following: with the assumption that the morphology of the vascular tree is similar in each organ, the specific surface area per organ volume can be estimated by the capillary density of an organ, which in turn can be estimated by the fraction of vascular space of an organ.
     
-2.  **Blood flow.** The capillary surface area is estimated by ![Image](images/sa-k-organ.png)<br>, with the constant of proportionality k, the organ blood flow Qorgan, the shape factor beta (default: beta=1). The permeability-surface area product ![Image](images/psa.png) is related to the extraction E by ![Image](images/psa-e-organ.png) \[[8](../references.md#8)\]. With the assumption that the extraction of drug in each organ is equal, ![Image](images/psa-organ.png) is obtained. If it is further assumed, that the permeability is equal for each organ one obtains ![Image](images/saq-org.png).
+2.  **Blood flow.** The capillary surface area is estimated by ![Image](../assets/images/part-3/sa-k-organ.png)<br>, with the constant of proportionality k, the organ blood flow Qorgan, the shape factor beta (default: beta=1). The permeability-surface area product ![Image](../assets/images/part-3/psa.png) is related to the extraction E by ![Image](../assets/images/part-3/psa-e-organ.png) \[[8](../references.md#8)\]. With the assumption that the extraction of drug in each organ is equal, ![Image](../assets/images/part-3/psa-organ.png) is obtained. If it is further assumed, that the permeability is equal for each organ one obtains ![Image](../assets/images/part-3/saq-org.png).
 
 #### Anatomy & Physiology‌
 
@@ -177,7 +177,7 @@ For some parameters, reasonable ranges are defined. For example pH values should
 From PK-Sim 5.6.2 onwards, the **Advanced** view offers the implementation of a zonated liver into an individual. Metabolic pathways in the liver are spatially separated along the liver sinusoids 29. Splitting the liver into more than one zone will improve simulation accuracy. As shown below, the liver is not zonated per default (only periportal zone). Upon zonation, the liver is split into a periportal and a pericentral zone. The parameter **Fraction of periportal zone** defines the ratio of the zone volumes and the surface areas and is set to 50% per default.
 
 ![The Advanced view in the Anatomy/Physiology tab offers the use of a zonated
-liver.](images/LiverZonation.png)
+liver.](../assets/images/part-3/LiverZonation.png)
 
 Switching between zonated and non-zonated liver does not alter the model structurally, but changes only the model parameterization.
 

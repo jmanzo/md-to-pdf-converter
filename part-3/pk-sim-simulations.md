@@ -22,7 +22,7 @@ To create a new simulation:
 
 In the **Create Simulation** dialog window the simulation is set up by specifying Individual or Population simulation, selecting a compound from a list and choosing the model settings:
 
-![The Create Simulation dialog. Here, the Model tab is shown in which the Individual "European Male" has already been selected.](images/create-simulation.jpg)
+![The Create Simulation dialog. Here, the Model tab is shown in which the Individual "European Male" has already been selected.](../assets/images/part-3/create-simulation.jpg)
 
 In order to create a new simulation, you are guided through five tabs of the **Create Simulation** window:
 
@@ -79,13 +79,13 @@ Please note that currently only for mouse, monkey and human species specific val
 
 In the **Compounds** tab of the **Create Simulation** window you can review the _Calculation methods_ selected for the partition coefficients and the cellular permeabilities. Also, you can review and override values for the _Parameter Alternatives_.
 
-![The Create Simulation dialog. Here, the two selected compounds can be viewed in the tabbed view.](images/create-simulation-20-2.jpg)
+![The Create Simulation dialog. Here, the two selected compounds can be viewed in the tabbed view.](../assets/images/part-3/create-simulation-20-2.jpg)
 
 Click **Next** in order to assign the relevant biological processes. Note that you can switch between the **Tabbed view** and the **Accordion View** in the **Utilities/ Options** menu if you selected more than one compound.
 
 ### Select relevant biological processes‌
 
-![The Create Simulation dialog. Here, the Processes tab is shown, in which the proteins, i.e. the enzymes, transporters and binding proteins, expressed in the Individual can be linked to the corresponding active processes defined in the Compound.](images/ProcessesSimulation.png)
+![The Create Simulation dialog. Here, the Processes tab is shown, in which the proteins, i.e. the enzymes, transporters and binding proteins, expressed in the Individual can be linked to the corresponding active processes defined in the Compound.](../assets/images/part-3/ProcessesSimulation.png)
 
 In the **Processes** tab of the **Create Simulation** window, processes like e.g. metabolic, transport, excretion and specific binding processes defined in the selected individual (or population) can be linked to the ADME properties of the selected compounds. A detailed descripton of how to set up interaction of a drug with enzymes/transporters (e.g. via a drug-drug interaction or induction) can be found in PK-Sim®\- Compounds: Defining inhibition/induction _processes_.
 
@@ -98,21 +98,21 @@ A green check mark indicates that the process is modeled when running the simula
 {% endhint %}
 
 Example 1:
-![Example 1: Overview](images/CreateSimulation_Processes_Linking.png)
+![Example 1: Overview](../assets/images/part-3/CreateSimulation_Processes_Linking.png)
 
 Example 2:
     
 Renal excretion of the compounds should be incorporated into the model. The following settings are required for the selected individual (the capability of renal excretion is a default setting):
 
-![The Create Individual dialog. Here a european male will be created.](images/PK-Sim_CreateSimulation_RenalExcretion.png)
+![The Create Individual dialog. Here a european male will be created.](../assets/images/part-3/PK-Sim_CreateSimulation_RenalExcretion.png)
 
 Add a renal clearance process for the selected compound in Compound → Biological processes → Transport & Excretion → Renal clearances, as exemplified in the following screenshot:
 
-![Defining the renal clearance process.](images/PK-Sim_CreateSimulation_Processes_renalExcretion2.png)
+![Defining the renal clearance process.](../assets/images/part-3/PK-Sim_CreateSimulation_Processes_renalExcretion2.png)
 
 Link the process in the individual with the biological process of the compound (if not yet automatically done):
 
-![The Transport & Excretion dialog. Here paper 2 is assigned as data source for renal clearances.](images/PK-Sim_CreateSimulation_Processes_RenalExcretion3.png)
+![The Transport & Excretion dialog. Here paper 2 is assigned as data source for renal clearances.](../assets/images/part-3/PK-Sim_CreateSimulation_Processes_RenalExcretion3.png)
 
 {% hint style="tip" %}
 If you wish to simulate a renally impaired individual, decrease the GFR properties in the selected individual, not in the compounds!
@@ -124,7 +124,7 @@ Click on **Next** in order to assign an application to your simulation
     
 In the **Administration** tab of the **Create Simulation** window, the administration protocol can be loaded from the project database or from a template. Further, a novel administration protocol can be defined and used. In addition, in the case of oral and user defined administration types, a formulation is required for the simulation.
 
-![The Create Simulation dialog. Here, the Administration tab is shown, in which different administration protocols can be selected for different drugs. At least one compound must be administered.](images/create-simulation-20-8.jpg)
+![The Create Simulation dialog. Here, the Administration tab is shown, in which different administration protocols can be selected for different drugs. At least one compound must be administered.](../assets/images/part-3/create-simulation-20-8.jpg)
 
 To insert an administration do one of the following:
     
@@ -145,7 +145,7 @@ None or exactly one administration protocol can be assigned to every compound us
 
 In the **Events** tab of the **Create Simulation** window, events such as the administration of meals and/or discrete gallbladder emptying can be defined at various points of the simulation.
 
-![The Create Simulation dialog. Here, the Events tab is shown, in which the administration of a Standard Meal immediately at the start of the simulation is selected.](images/PK-Sim_CreateSimulation_Event.png)
+![The Create Simulation dialog. Here, the Events tab is shown, in which the administration of a Standard Meal immediately at the start of the simulation is selected.](../assets/images/part-3/PK-Sim_CreateSimulation_Event.png)
 
 Events are optional for creating a simulation. Possible predefined events are currently the application of a meal to simulate fed conditions for an oral administration and gallbladder emptying independent from meal administration. To insert an event do one of the following:
 
@@ -159,7 +159,7 @@ Click **OK** ![Image](../assets/icons/OK.png) to finish the **Create Simulation*
 
 If you have successfully created a simulation, it will appear in the simulation window with its name and its components:
 
-![The Simulations explorer.](images/PK-Sim_CreateSimulation_SimulationWindow.png)
+![The Simulations explorer.](../assets/images/part-3/PK-Sim_CreateSimulation_SimulationWindow.png)
 
 {% hint style="tip" %}
 The green check marks indicate that the building blocks used in the simulation have the same settings as the original building blocks saved in the building block explorer window. Changing the settings in the simulation is done locally without affecting the original building blocks in the building block explorer window.
@@ -169,21 +169,21 @@ The green check marks indicate that the building blocks used in the simulation h
 
 From version 5.6.2 onwards, PK-Sim® offers two alternatives to define drug metabolites. First, metabolites can be a "sink" which means that not actively or passively transported. They possess no physico-chemical or ADME properties and cannot be used as compounds in a simulation. Second, one of the compounds in a simulation can be assigned to be a metabolite or another compound. The metabolite possesses physico-chemical and ADME properties and be transported. In addition, the metabolite can be used in further metabolizations and thus a metabolic network can be built.
 
-![The name of the metabolite can be defined in specifying the metabolic processes.](images/Metabolite1.png)
+![The name of the metabolite can be defined in specifying the metabolic processes.](../assets/images/part-3/Metabolite1.png)
 
 If you want the compound not be treated as sink, it needs to be included into the list of compounds in the building blocks.
 
-![Metabolites are treated like any other compounds when listed in the building blocks.](images/Metabolite2.png)
+![Metabolites are treated like any other compounds when listed in the building blocks.](../assets/images/part-3/Metabolite2.png)
 
 If you click on **Show Diagram**, a reaction network of all reactions in the simulation is shown (not just the metabolic network).
 
-![All reactions in a simulation are depicted in the reaction diagram.](images/ReactionNetwork.png)
+![All reactions in a simulation are depicted in the reaction diagram.](../assets/images/part-3/ReactionNetwork.png)
 
 ## Running a simulation in an individual‌
 
 If a simulation was successfully created, press the **Run** simulation button ![Image](../assets/icons/Run-arrow.png) in the Modeling & Simulation ribbon or press the F5 key. If the simulation is run for the first time, ths following window will appear in which the simulation curves that will be generated in the simulation can be selected:
 
-![The Individual Simulation Settings window. Here, the organs and compartments for which concentration time curves are generated in the individual simulation can be selected.](images/IndividualSimulationSettingsCurveSelection.png)
+![The Individual Simulation Settings window. Here, the organs and compartments for which concentration time curves are generated in the individual simulation can be selected.](../assets/images/part-3/IndividualSimulationSettingsCurveSelection.png)
 
 Per default, the peripheral venous blood plasma is already selected. If desired, select further outputs and then press **OK**. The result of the individual simulation will be automatically displayed.
 
@@ -199,7 +199,7 @@ Two venous blood outputs can be selected: “Venous Blood” and “Peripheral V
 As the observer for peripheral venous blood sampling represents a balanced mixture of plasma concentrations of the drug in arterial blood, bone, fat, muscle, and skin please do not use the peripheral venous blood observer in the case of e.g. subcutaneous or intramuscular drug administration. This will lead to an overestimation of the concentration in plasma.
 {% endhint %}
 
-![The Results tab of the Simulation window. Here, the simulated plasma concentration-time profile following oral administration of a diclofenac IR tablet is shown in comparison to experimental data.](images/PK-Sim_CreateSimulation_RunSimulation_Results1.png)
+![The Results tab of the Simulation window. Here, the simulated plasma concentration-time profile following oral administration of a diclofenac IR tablet is shown in comparison to experimental data.](../assets/images/part-3/PK-Sim_CreateSimulation_RunSimulation_Results1.png)
 
 For general information about the chart component, i.e. chart settings and options etc., please see [Chart Component](../part-5/02-chart-component.md).
 
@@ -209,7 +209,7 @@ If you would like to cancel the running process, press the **Stop** button next 
 
 If you wish to change the settings of the simulation, click on the **Parameters** tab. If you have simulated a population, there are two more tabs **User Defined Variability** and **Distribution** in which the settings also might be changed. For both, individual and population simulations, there are three views on the parameter settings to select at the bottom of the window:
 
-![The Parameters tab of the Simulation window. Here, the Settings of the simulation are shown.](images/PK-Sim_CreateSimulation_RunSimulation_Results2.png)
+![The Parameters tab of the Simulation window. Here, the Settings of the simulation are shown.](../assets/images/part-3/PK-Sim_CreateSimulation_RunSimulation_Results2.png)
 
 *   Simple view: in this view, not all parameters are displayed
 
@@ -224,11 +224,11 @@ It is recommended to select all parameters under consideration as **Favorites** 
 {% endhint %}
 
 {% hint style="warning" %}
-If you change the parameter settings in the **Parameter** tab, the green check marks (traffic lights) on the Results tab will turn red indicating that the displayed simulation results were not performed with the current settings:<br> ![Image](images/PK-Sim_CreateSimulation_RunSimulation_Results3.png)<br> Press the **Run** simulation button in the **Modeling & Simulation** ribbon or press the **F5** key again to re-run the simulation with the current settings and display the results.
+If you change the parameter settings in the **Parameter** tab, the green check marks (traffic lights) on the Results tab will turn red indicating that the displayed simulation results were not performed with the current settings:<br> ![Image](../assets/images/part-3/PK-Sim_CreateSimulation_RunSimulation_Results3.png)<br> Press the **Run** simulation button in the **Modeling & Simulation** ribbon or press the **F5** key again to re-run the simulation with the current settings and display the results.
 {% endhint %}
 
 {% hint style="warning" %}
-If parameter settings were changed in the simulation, the red traffic lights in the **Simulation** window indicate that the **local settings** in the simulation are different from the settings in the **Building Block**, i.e. the **global settings**:<br>![Image](images/PK-Sim_CreateSimulation_RunSimulation_Results4.png) <br>A right click on the red traffic lights in the simulation window allows for two possibilities:<br> ![Image](images/PK-Sim_CreateSimulation_RunSimulation_Update-Commit.png)<br> *   Update from building block: The simulation settings (local) will be updated with the (global) settings of the building block. This is useful if you want to discard the settings of your simulation and get back to the original settings defined in the building block.<br> *   Commit to building block: The (local) settings of the simulation will be committed to the building block (global settings). This is useful if you want to make these settings available in other simulations.<br> *   Configure: Instead of updating a single building block within your simulation you can also Configure the entire simulation and update or exchange several building blocks at a time. To do so, right mouse click on the simulation and select Configure. The Create Simulation dialog will open where you can exchange the parameters and building blocks of your simulation. In the case of building blocks for which changes were made in the simulation, the name will be supplemented by the warning This is not the template building block!. To update the settings of the simulation select the appropriate building block from the drop-down menu.
+If parameter settings were changed in the simulation, the red traffic lights in the **Simulation** window indicate that the **local settings** in the simulation are different from the settings in the **Building Block**, i.e. the **global settings**:<br>![Image](../assets/images/part-3/PK-Sim_CreateSimulation_RunSimulation_Results4.png) <br>A right click on the red traffic lights in the simulation window allows for two possibilities:<br> ![Image](../assets/images/part-3/PK-Sim_CreateSimulation_RunSimulation_Update-Commit.png)<br> *   Update from building block: The simulation settings (local) will be updated with the (global) settings of the building block. This is useful if you want to discard the settings of your simulation and get back to the original settings defined in the building block.<br> *   Commit to building block: The (local) settings of the simulation will be committed to the building block (global settings). This is useful if you want to make these settings available in other simulations.<br> *   Configure: Instead of updating a single building block within your simulation you can also Configure the entire simulation and update or exchange several building blocks at a time. To do so, right mouse click on the simulation and select Configure. The Create Simulation dialog will open where you can exchange the parameters and building blocks of your simulation. In the case of building blocks for which changes were made in the simulation, the name will be supplemented by the warning This is not the template building block!. To update the settings of the simulation select the appropriate building block from the drop-down menu.
 {% endhint %}
 
 ## Analyzing results for a simulation in an individual‌
@@ -273,7 +273,7 @@ If you wish to display other percentiles or other curves without simulating agai
 
 If a simulation has been successfully created, click **Show PK-Analysis** on the bottom of the chart window. PK parameters are then calculated and displayed next to the chart.
 
-![PK-Analysis view of the Results window.](images/pk-analysis-20-17.jpg)
+![PK-Analysis view of the Results window.](../assets/images/part-3/pk-analysis-20-17.jpg)
 
 The calculated pharmacokinetic parameters are:
 
@@ -281,29 +281,29 @@ The calculated pharmacokinetic parameters are:
 
 |PK parameter |Description |
 |--- |--- |
-|AUC_tEnd | Area under curve from tstart to tend of the simulation. <br>![Image](images/equation-20-1-3.png)|
-|AUC_inf | Area under curve extrapolated to infinity (using the terminal 10% of data points).<br>![Image](images/equation-20-4-6.png) <br>, where # is the terminal elimination rate (calculated from the terminal 10% of simulated points).|
-|%AUC(tlast-inf) | Percentage of AUCinf after end of simulation time. <br>![Image](images/equation-20-7.png) |
-| AUC\_tEnd\_norm | Area under curve extrapolated to infinity and normalized to the dose dose in drug mass per body weight. <br>![Image](images/equation-20-8.png)|
-|AUC\_inf\_norm | Area under curve extrapolated to infinity and normalized to the dose \[dose in drug mass per body weight\]. <br>![Image](images/equation-20-9.png)|
+|AUC_tEnd | Area under curve from tstart to tend of the simulation. <br>![Image](../assets/images/part-3/equation-20-1-3.png)|
+|AUC_inf | Area under curve extrapolated to infinity (using the terminal 10% of data points).<br>![Image](../assets/images/part-3/equation-20-4-6.png) <br>, where # is the terminal elimination rate (calculated from the terminal 10% of simulated points).|
+|%AUC(tlast-inf) | Percentage of AUCinf after end of simulation time. <br>![Image](../assets/images/part-3/equation-20-7.png) |
+| AUC\_tEnd\_norm | Area under curve extrapolated to infinity and normalized to the dose dose in drug mass per body weight. <br>![Image](../assets/images/part-3/equation-20-8.png)|
+|AUC\_inf\_norm | Area under curve extrapolated to infinity and normalized to the dose \[dose in drug mass per body weight\]. <br>![Image](../assets/images/part-3/equation-20-9.png)|
 |AUC Ratio (AUCR) | AUC_I/AUC (Area under the plasma concentration-time curve of the substrate in the presence of the inhibitor / Area under the plasma concentration-time curve of the substrate in the absence of the inhibitor) |
 |C_max| Maximum concentration|
 |C\_max\_norm | Maximum concentration normalized to dose dose in drug mass per body weight |
 |C\_max Ratio (Cmax\_R) | C\_max\_I/C_max (Maximum concentration of the plasma concentration-time curve of the substrate in the presence of the inhibitor / Maximum concentration of the plasma concentration-time curve of the substrate in the absence of the inhibitor)|
 |C_tEnd | concentration at the end of simulation |
 | t_max | Time at which the maximum concentration is assumed |
-| Half-Life | Terminal half life time (calculated from the terminal 10% of data points). <br>![Image](images/equation-20-10.png) <br>, where # is the terminal elimination rate (calculated from the terminal 10% of simulated points).|
-| MRT | Mean residence time is calculated by:<br>![Image](images/equation-20-11.png)<br>The infusion time is set to 0 for non intravenous administrations. The AUMCs are calculated according to: <br>![Image](images/equation-20-12-13.png)<br>![Image](images/equation-20-14.png)<br>, where # is the terminal elimination rate (calculated from the terminal 10% of simulated points).|
+| Half-Life | Terminal half life time (calculated from the terminal 10% of data points). <br>![Image](../assets/images/part-3/equation-20-10.png) <br>, where # is the terminal elimination rate (calculated from the terminal 10% of simulated points).|
+| MRT | Mean residence time is calculated by:<br>![Image](../assets/images/part-3/equation-20-11.png)<br>The infusion time is set to 0 for non intravenous administrations. The AUMCs are calculated according to: <br>![Image](../assets/images/part-3/equation-20-12-13.png)<br>![Image](../assets/images/part-3/equation-20-14.png)<br>, where # is the terminal elimination rate (calculated from the terminal 10% of simulated points).|
 |
 
 2.  In simulations with intravenous administration:
 
 |PK parameter | Description |
 |--- |--- |
-| VSS(plasma) | Volume of distribution at steady state calculated from the plasma curve according to: <br>![Image](images/equation-20-15.png)|
-|Vd(plasma) | Apparent volume of distribution is calculated from the plasma curve according to: ![Image](images/equation-vd-cl.png) , where # is the terminal elimination rate (calculated from the terminal 10% of simulated points). If simulation time is short, the distribution volume may be incorrect. Run a longer simulation (to approach steady state) and reevaluate the distribution volume. |
+| VSS(plasma) | Volume of distribution at steady state calculated from the plasma curve according to: <br>![Image](../assets/images/part-3/equation-20-15.png)|
+|Vd(plasma) | Apparent volume of distribution is calculated from the plasma curve according to: ![Image](../assets/images/part-3/equation-vd-cl.png) , where # is the terminal elimination rate (calculated from the terminal 10% of simulated points). If simulation time is short, the distribution volume may be incorrect. Run a longer simulation (to approach steady state) and reevaluate the distribution volume. |
 |Vss(phys-chem) | Predicted volume of distribution = Volume-weighted mean organ to plasma partition coefficient calculated from physico- chemical compound data. |
-|Total plasma clearance CL | Total clearance calculated from plasma curve according to: <br> ![Image](images/equation-20-16.png) |
+|Total plasma clearance CL | Total clearance calculated from plasma curve according to: <br> ![Image](../assets/images/part-3/equation-20-16.png) |
 |Total body clearance | D/AUC - Total body clearance of drug or apparent clearance (CL/F for extravascular application), dimension is ml/min/kg |
 
 3.  In simulations with oral administration
@@ -311,8 +311,8 @@ The calculated pharmacokinetic parameters are:
 |PK parameter | Description |
 |--- |--- |
 |Vss(plasma)/F | Volume of distribution at steady state calculated from plasma curve (see above) divided by bioavailability|
-|Vd(plasma)/F | Apparent volume of distribution calculated from the plasma curve according to<br>![Image](images/equation-20-17.png)<br>(see above) divided by bioavailability|
-|Total plasma clearance/F | Total clearance calculated from plasma curve according to<br>![Image](images/equation-20-18.png)<br> divided by bioavailability |
+|Vd(plasma)/F | Apparent volume of distribution calculated from the plasma curve according to<br>![Image](../assets/images/part-3/equation-20-17.png)<br>(see above) divided by bioavailability|
+|Total plasma clearance/F | Total clearance calculated from plasma curve according to<br>![Image](../assets/images/part-3/equation-20-18.png)<br> divided by bioavailability |
 |Fraction absorbed | Absorbed fraction of applied oral dose. Please note that, e.g. in the case of enterohepatic circulation, this fraction may exceed 1 |
 |Bioavailability | The bioavailability is only calculated on request. After pressing the button **Bioavailability** a second simulation with an intravenous (i.v.) short infusion is carried out (internally without being displayed) using identical parameters to the last simulation with oral (p.o.) administration. The bioavailability is then calculated from AUCinf (p.o.)/AUCinf (i.v.) in the venous blood compartment. For a proper estimate of the AUCinf (p.o.) it is recommended to simulate as long as total gastrointestinal transit takes. After changing any parameter the results of previously run simulations are no longer valid. In such a situation, the **Bioavailability** button is deactivated until the p.o. simulation has been executed with the current parameters.|
 
@@ -348,7 +348,7 @@ For more information on adding variability to a defined population, go to PK-Sim
 
 Once all parameters are set, click the **Run** simulation button ![Image](../assets/icons/RunSimulation.png) in the **Modeling & Simulation** group or press the **F5** key. The **Population Simulation Settings window: Curve selection** window will appear in which organs and compartments are selected in which time profiles and PK-parameters will be calculated.
     
-![The Population Simulation Settings: Curve Selection window. Time profiles and PK-parameters will be calculated in the selected organs and compartments.](images/population-simulation-20-18.jpg)
+![The Population Simulation Settings: Curve Selection window. Time profiles and PK-parameters will be calculated in the selected organs and compartments.](../assets/images/part-3/population-simulation-20-18.jpg)
 
 Choose the organ and the compartment by expanding the respective drop-down menue and select by ticking the box in the right column of the table. Press **OK** to start the simulation run.
 
@@ -372,7 +372,7 @@ The calculated PK-parameters of all individual curves can be exported using the 
 The underlying data of population analysis can be exported to Excel® using the **Export to Excel**®**...** item from the context menu of the chart view. Two sheets are created containing the data as original and transposed matrix.
 {% endhint %}
 
-![Select specific curves from the list of organs/compartments in which time profiles were simulated.](images/PK-Sim_CreateSimulation_PopSim_TimeProfile_Outputs.png)
+![Select specific curves from the list of organs/compartments in which time profiles were simulated.](../assets/images/part-3/PK-Sim_CreateSimulation_PopSim_TimeProfile_Outputs.png)
 
 #### Definition of groupings
 
@@ -394,7 +394,7 @@ Continue as follows:
 
 *   For each interval, select a label and change color and symbol (used in scatter plots) by changing default settings.
 
-![Using customized grouping of output by Population Parameters or PK- Parameters.](images/Grouping_IndividualBins.png)
+![Using customized grouping of output by Population Parameters or PK- Parameters.](../assets/images/part-3/Grouping_IndividualBins.png)
 
 ##### User defined (equally populated) number of bins
 
@@ -436,7 +436,7 @@ For each curve PK parameters are calculated and can be shown by clicking on the 
 
 *   PK-Analysis view ![Image](../assets/icons/PKAnalysis-32x32.png): The calculated PK parameters for the selected calculated curves are displayed. See “PK- Analysis view”.
 
-![Display simulated concentration-/fraction-time profiles stratified by Population Parameters and/or PK-parameters.](images/PK-Sim_CreateSimulation_PopSim_TimeProfile_Plot1.png)
+![Display simulated concentration-/fraction-time profiles stratified by Population Parameters and/or PK-parameters.](../assets/images/part-3/PK-Sim_CreateSimulation_PopSim_TimeProfile_Plot1.png)
 
 If you hover over the simulated time-profiles, details of the curve are displayed, e.g. the organ/compartment in which the time-profile was simulated, the statistical quantity that is plotted and the x- and y-values of the underlying data points.
 
@@ -478,15 +478,15 @@ In order to display **Observed Data** in your Time Profile Analysis do and note 
 For comparison charts observed data can not be removed from the analysis, but only made invisible by unticking the **Visible** box in the Chart Options.
 {% endhint %}
 
-![Display observed data in a time profile analysis. Upon drag and drop into the analysis, observed data is displayed in all panels by default.](images/PK-Sim_CreateSimulation_ObsData1.png)
+![Display observed data in a time profile analysis. Upon drag and drop into the analysis, observed data is displayed in all panels by default.](../assets/images/part-3/PK-Sim_CreateSimulation_ObsData1.png)
 
-![Observed data can be grouped by meta data used in stratification and is then displayed in the corresponding panel only.](images/PK-Sim_CreateSimulation_ObsData2.png)
+![Observed data can be grouped by meta data used in stratification and is then displayed in the corresponding panel only.](../assets/images/part-3/PK-Sim_CreateSimulation_ObsData2.png)
 
 #### The Box Whisker Analysis
 
 In contrast to the Time Profile Analysis, population parameters and PK- parameters serve not only as grouping criteria in the Box Whisker Analysis, but may also be plotted. Any parameter selected in the **Population Parameters** tab and **PK-Parameters** tab is listed in the **Selected Outputs** panel of the **Box Whisker Plot** tab. Select a parameter for plotting by ticking the respective box. Grouping criteria are defined as described above and can be selected from the **Available Fields**. For grouping along the x-axis, several criteria may be selected by dragging to the **X-Grouping** panel. Grouping by color may be used for one criterion only and a corresponding legend is automatically created. The box comprises 25% (lower rim) to 75% (upper rim) of the values. The whiskers extend from 2.5% to 97.5% of the values in the population. The distance between the lower and upper box rim is called the inner quartile range (IQR). Outliers are values which lie outside the range from lower whisker limit - 1.5 time IQR to upper whisker limit + 1.5 time IQR.
 
-![Display simulated parameters in a box whisker plot stratified by Population Parameters and/or PK-parameters.](images/PK-Sim_CreateSimulation_PopSim_BoxWhisker.png)
+![Display simulated parameters in a box whisker plot stratified by Population Parameters and/or PK-parameters.](../assets/images/part-3/PK-Sim_CreateSimulation_PopSim_BoxWhisker.png)
 
 A separate panel is created for each of the selected output parameters in the graphical display. The name and unit of the output parameters is printed along the Y-axis.
 
@@ -494,13 +494,13 @@ A separate panel is created for each of the selected output parameters in the gr
 
 In the **Scatter Plot Analysis** population parameters and PK-parameters can also be used as grouping criteria and be plotted. Grouping criteria are defined as described above. In addition to grouping in different panes or by different colors, you can group your output by symbols. Do so by dragging a grouping criterion into the **Symbols** panel. The symbols need to be defined along with the other grouping criteria in the **Population Parameter** or **PK-Parameter** tab.
 
-![Display simulated parameters in a scatter plot stratified by Population parameters and/or PK-parameters.](images/PK-Sim_CreateSimulation_PopSim_ScatterPlot.png)
+![Display simulated parameters in a scatter plot stratified by Population parameters and/or PK-parameters.](../assets/images/part-3/PK-Sim_CreateSimulation_PopSim_ScatterPlot.png)
 
 #### The Range Plot Analysis
 
 Similar to the **Scatter Plot Analysis**, the **Range Plot Analysis** offers continuous plotting of parameters on both axis. Grouping by **Population Parameters** and/or **PK-Parameters** is done as decribed above. The range plot displays the median of the parameter as a thick line and the parameter range that comprises 5-95% of individuals of the population.
 
-![Display simulated parameters in a range plot that displays the median and parameter range covered by 5-95% of individuals of that population.](images/PK-Sim_CreateSimulation_PopSim_ChangeAnalysis.png)
+![Display simulated parameters in a range plot that displays the median and parameter range covered by 5-95% of individuals of that population.](../assets/images/part-3/PK-Sim_CreateSimulation_PopSim_ChangeAnalysis.png)
 
 Details of your analysis can be changed by right mouse click into the plot and selecting **Edit**.
 
@@ -532,17 +532,17 @@ To create a comparison plot for simulation in individuals proceed in the followi
 
 *   Click on the **Comparison Chart** button ![Image](../assets/icons/Comparison-chart.png) in the Ribbon group **Simulation** and select **For Individual Simulations**. A new entry in the Simulation window will appear, **Comparison Chart 1**.
 
-![The Comparison chart for comparing simulations in individuals.](images/PK-Sim_CreateSimulation_ComparisonIndiv.png)
+![The Comparison chart for comparing simulations in individuals.](../assets/images/part-3/PK-Sim_CreateSimulation_ComparisonIndiv.png)
 
 *   Open the comparison chart (if not already open). An empty chart will be displayed.
 
 *   Drag and drop the simulations you want to compare from the Simulation window into the empty comparison chart.
 
-![Drag and drop of simulation results into the comparison chart.](images/PK-Sim_CreateSimulation_ComparisonIndivDrag.png)
+![Drag and drop of simulation results into the comparison chart.](../assets/images/part-3/PK-Sim_CreateSimulation_ComparisonIndivDrag.png)
 
 *   Select the simulated curves you would like to display in the comparison chart.
 
-![Comparison Chart: Select the compartments for which simulated curves are to be displayed.](images/CompareSimulations2.png)
+![Comparison Chart: Select the compartments for which simulated curves are to be displayed.](../assets/images/part-3/CompareSimulations2.png)
 
 *   If desired, add observed data from the building block by drag and drop to the chart.
 
@@ -554,11 +554,11 @@ In contrast to previous versions, PK-Sim® version 5.3 offers a comparison chart
 
 *   Click on the **Comparison Chart** button ![Image](../assets/icons/Comparison-chart.png) in the Ribbon group **Simulation** and select **For Population Simulations**. A new window **Select simulations to use in comparison** opens up. Select the simulations you want to compare by ticking the respective boxes. In addition, you can select a population as a reference population and specify labeling, symbol and color for plotting.
 
-![Select population simulations that you want to compare.](images/PK-Sim_CreateSimulation_ComparisonPopulations.png)
+![Select population simulations that you want to compare.](../assets/images/part-3/PK-Sim_CreateSimulation_ComparisonPopulations.png)
 
 *   When you have approved your selection of the curves by clicking OK, the **Comparison chart** chart offers you to look at the distribution of population parameters in the set union of the populations.
 
-![The Distribution tab of the Comparison Chart displays the distribution of population parameters in all populations.](images/PK-Sim_CreateSimulation_ComparisonPopulations_Distribution.png)
+![The Distribution tab of the Comparison Chart displays the distribution of population parameters in all populations.](../assets/images/part-3/PK-Sim_CreateSimulation_ComparisonPopulations_Distribution.png)
 
 *   You can then select the analysis type for your comparison from the **Analysis** button and then proceed with selection output and grouping criteria as secribed above.
 
@@ -566,10 +566,10 @@ In contrast to previous versions, PK-Sim® version 5.3 offers a comparison chart
 For a comparison of populations, only the intersecting set of output appears, e.g. if you selected venous plasma concentrations as output in all populations, it appears in the list of **Outputs** in the time profile analysis tab.
 {% endhint %}
 
-![Using the Comparison Chart combined with grouping of output allows a differentiated view of the results of population simulations.](images/PKSim_CreateSim_GroupedPopComparison.png)
+![Using the Comparison Chart combined with grouping of output allows a differentiated view of the results of population simulations.](../assets/images/part-3/PKSim_CreateSim_GroupedPopComparison.png)
 
 If you define a population as a reference population, it will not be grouped into subpopulations. This might be useful when you want to compare variability in subgroups of one population with the variability of a reference population. This is illustrated below.
 
-![Box Whisker Analysis of two populations in a Comparison Chart without defining a reference population.](images/PK-Sim_CreateSimulation_CompPop_noReference.png)
+![Box Whisker Analysis of two populations in a Comparison Chart without defining a reference population.](../assets/images/part-3/PK-Sim_CreateSimulation_CompPop_noReference.png)
 
-![Box Whisker Analysis of two populations in a Comparison Chart defining one (the adult) population as reference population.](images/PK-Sim_CreateSimulation_CompPop_withReference.png)
+![Box Whisker Analysis of two populations in a Comparison Chart defining one (the adult) population as reference population.](../assets/images/part-3/PK-Sim_CreateSimulation_CompPop_withReference.png)

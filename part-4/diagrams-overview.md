@@ -28,7 +28,7 @@ To scroll the diagram, use one of the following options:
 
 *   For the spatial structure and simulation, there is a **Diagram Overview** to the left of the diagram and above the model tree. Here, the current clipping is marked by a rectangular frame. You can pick this frame at its edge and move it to select the displayed clipping of the diagram, i.e., to scroll the diagram.
 
-	![Image](images/DiagramOverviewScroll.png)
+	![Image](../assets/images/part-4/DiagramOverviewScroll.png)
 
 To zoom the diagram, use one of the following options:
 
@@ -42,7 +42,7 @@ To zoom the diagram, use one of the following options:
 
 ![Image](../assets/icons/DiagramOverviewZooml.png)
 
-![Spatial Structure Visualization](images/OrganismTotal.png)
+![Spatial Structure Visualization](../assets/images/part-4/OrganismTotal.png)
 
 For visualization, model containers are represented by **container nodes**, which can be expanded and collapsed (see next section). Other model entities are represented by **elementary nodes** and **links**. Neighborhoods, for example, are represented by a neighborhood node and links.
 
@@ -68,7 +68,7 @@ In the spatial structure and simulation view, you can navigate into subcontainer
 
 *   Press **Ctrl** and click ![Image](../assets/icons/ExpandSymbol.png) / ![Image](../assets/icons/CollapseSymbol.png) to expand resp. collapse a container recursively.
 
-![Expanded Kidney Structure](images/Kidney.png)
+![Expanded Kidney Structure](../assets/images/part-4/Kidney.png)
 
 ## General Editing‌
 
@@ -84,7 +84,7 @@ The model and diagram state after changes is stored within the project, diagram 
 
 You can perform many changes via the context menu. To open the **context menu**, right-click somewhere into the diagram. Depending on the location context, different menu items are displayed. The following context menu is shown when you right-click on a container.
 
-![Container context menu](images/ContextMenuContainer.png)
+![Container context menu](../assets/images/part-4/ContextMenuContainer.png)
 
 The different context menu items are described in the sections below.
 
@@ -232,7 +232,7 @@ Modifiers are molecules which influence the reaction, but which are neither cons
 
 Besides these reaction nodes, the reaction diagram can contain molecule nodes. The molecule nodes themselves do not represent any model objects (neither from the reactions building block nor from the molecules building block), they only represent molecule names. Instead, an educt is represented by the connection between the educts port of a reaction node and a molecule node with the educt name. Products and modifiers are represented analogously by connections to the corresponding ports.
     
-![Example Reaction Diagram](images/ReactionDiagram.png)
+![Example Reaction Diagram](../assets/images/part-4/ReactionDiagram.png)
     
 In the reaction diagram, no containers are used, so the remarks from “General Navigation, Expand and Collapse” do not apply here.
     

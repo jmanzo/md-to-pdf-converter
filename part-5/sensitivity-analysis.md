@@ -46,17 +46,17 @@ To calculate the sensitivity of a PK Parameter of a certain output = PKj  to an 
 
 The sensitivity for the PK Parameter to that input parameter is then calculated as the ratio of the relative change of that PK Parameter \[ = (# PKj) / PKj \] and the relative variation of the input parameter \[ = (# pi) / pi \]:
 
-![Image](images/sij.png)
+![Image](../assets/images/part-5/sij.png)
 
 Thus, the sensitivities are dimensionless quantities. As an example, a sensitivity of -1.0 implies that a 10% increase of the parameters leads to a 10% decrease of the PK parameter value, and a sensitivity of +0.5 implies that a 10% increase of the parameters leads to a 5% increase of the PK parameter value.
 
 For reasons of numerical stability, a sensitivity is calculated as the average of several sensitivities based on different variations #k :
 
-![Image](images/sij-e.png)
+![Image](../assets/images/part-5/sij-e.png)
 
 The relative variations #k are defined by multiplication of the value in the simulation with variation factors. These variation factors are defined by setting two configuration parameters "Number of Steps” \[ = n \] and “Variation Range” \[ = a \] in the following way :
 
-For each value of k = 1 ... n, two factors are used: ![Image](images/1-a-k-n.png) and ![Image](images/1-1-a-kn.png)
+For each value of k = 1 ... n, two factors are used: ![Image](../assets/images/part-5/1-a-k-n.png) and ![Image](../assets/images/part-5/1-1-a-kn.png)
 
 For the default setting n = 2 and a = 0.1, we get 4 variation factors: 1/1.1, 1/1.05, 1.05, 1.1 .
 
@@ -82,7 +82,7 @@ For a hands on example, open the example project Theophylline.pksim5. You can op
 
 In the Simulation Explorer, mark the simulation "_Kaumeier IV 208 mg fit_" and select ![Image](../assets/icons/SensitivityAnalysis.png) **Start Sensitivity Analysis ...** from the context menu.
 
-![Sensitivity Analysis - Tab Parameters](images/SA_Parameters1.png)
+![Sensitivity Analysis - Tab Parameters](../assets/images/part-5/SA_Parameters1.png)
 
 In the Simulation Explorer, the Sensitivity Analyses are also displayed in a tree. Using the context menu, you can
 
@@ -104,7 +104,7 @@ You can select the input parameters that are of interest to you and that you wan
     
 2.  You can select specific input parameter by manually selecting them (multiple selection is possible) and clicking Add. To identify the parameters of interest it can be helpful to reorganize the parameter list view on the left and use column filters or the Find field.
     
-![Selection of interesting input parameters](images/SA_Parameters2.png)
+![Selection of interesting input parameters](../assets/images/part-5/SA_Parameters2.png)
 
 {% hint style="tip" %}
 Be aware that only independent input parameters are displayed and selectable for Sensitivity Analysis, input parameters calculated by a formula cannot be selected.
@@ -146,7 +146,7 @@ In the ribbon bar **Sensitivity Analysis**, you can start and stop the calculati
 
 Click ![Image](../assets/icons/SA_VisualFeedback.png) **Show Visual Feedback** to see a progress bar of the simulations calculation.
 
-![Visual Feedback - Progress bar of calculated simulations](images/SA_ProgressBar.png)
+![Visual Feedback - Progress bar of calculated simulations](../assets/images/part-5/SA_ProgressBar.png)
 
 After the calculation is finished, you can:
 
@@ -164,14 +164,14 @@ Select an output and a PK Parameter for that output. (Normalized PK parameters a
 
 Then a list of the input parameters with the most impact on that PK Parameter is displayed ranked by their impact resp. sensitivity.
 
-![Ranking of Input paramters by sensitivity](images/SA_Ranking1.png)
+![Ranking of Input paramters by sensitivity](../assets/images/part-5/SA_Ranking1.png)
 
 For some outputs not all PK Parameters are reasonable, for instance clearance parameters for Fraction excreted outputs. Then no ranking is calculated and displayed.
 
 {% hint style="note" %}
 For display in the chart, the parameters which contribute 90% of the cumulated sensitivity are determined. To do this the sensitivities are sorted by the absolute values and then they are cumulated in order of their sorting, according to 
 
-![Image](images/scum-lj.jpg)
+![Image](../assets/images/part-5/scum-lj.jpg)
 
 with l=1,…,nP (number of parameters) and j index of PK parameter. The cumulated sensitivities as defined above include normalization to the absolute total sensitivity. Therefore, the normalized total sensitivity Stotal = SCum, nP j = 1. The cut-off is defined so that the above cut-off parameter sensitivities capture 90% of the total sensitivity.
 {% endhint %}
@@ -194,14 +194,14 @@ You can sort and filter rows and columns to restrict the view to the sensitivite
 
 *   For simple filtering just move the cursor right to the sort symbol of the headers **Parameter**, **Output**, **PK Parameter** and click the filter symbol which shows up. You can select the values of interest in the filter list.
 
-![Image](images/SA_Filter.png)
+![Image](../assets/images/part-5/SA_Filter.png)
 
 *   For more sophisticated filtering, right click the header and select **Show Prefilter**. A dialog shows up, click the + symbol and enter more complex conditions.
 
-![Image](images/SA_Prefilter.png)
+![Image](../assets/images/part-5/SA_Prefilter.png)
 
 As a result, you get a restricted view of the sensitivity matrix.
 
-![Sensitivity Matrix](images/SA_Results1.png)
+![Sensitivity Matrix](../assets/images/part-5/SA_Results1.png)
 
 Alternatively, you can export the full matrix (filters are not used) to Excel by clicking **Export to Excel**.

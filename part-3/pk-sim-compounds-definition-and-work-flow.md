@@ -6,15 +6,15 @@ A Compound is a set of data that describes the properties of the substance whose
     
 To create a new compound, do one of the following:
 
-*   Click on **Compound** ![Image](images/Compound-2.png) in the **Create New Building Blocks** Group of the Modeling & Simulation Tab
+*   Click on **Compound** ![Image](../assets/images/part-3/Compound-2.png) in the **Create New Building Blocks** Group of the Modeling & Simulation Tab
 
-*   Right mouse click on **Compounds** in the **Building Block Explorer** and select ![Image](images/Compound_trans.png) **Add Compound...**
+*   Right mouse click on **Compounds** in the **Building Block Explorer** and select ![Image](../assets/images/part-3/Compound_trans.png) **Add Compound...**
 
 *   Use the short cut **Ctrl+Alt+C**
 
 A dialog will open, where the properties of the compound can be defined. The compound is initialized by giving it a **Name** in the respective input field. The name is used to identify the substance when its parameters are saved in the project and/or as a template. The properties of the compound can then be set or changed:
 
-![The Create Compound dialog. Here, the basic physico-chemical properties of diclofenac are shown.](images/PKSim_Compound_NewCompound.png)
+![The Create Compound dialog. Here, the basic physico-chemical properties of diclofenac are shown.](../assets/images/part-3/PKSim_Compound_NewCompound.png)
 
 The **Create Compound** building block is subdivided into three tabs: Basic Physico-chemistry, ADME Properties, and Advanced Properties.
 
@@ -86,7 +86,7 @@ In the first line the molecular weight (MW) of the substance is specified. For s
 {% hint style="tip" %}
 Even though the property determining the diffusion coefficient is the molecular volume rather than the weight, only the latter is commonly available and has therefore been chosen as easily accessible input parameter. However, in some cases this leads to inaccurate results, particularly since halogen atoms have a much smaller volume than what would be expected from their weight. Therefore, for substances containing such atoms “effective molecular weights” based on the following corrections are used (N = number of atoms, CF = correction factor):
 **Effective Molecular Weight**
-![Image](images/equation-15-1.png)
+![Image](../assets/images/part-3/equation-15-1.png)
 with CF = 17 for fluorine, CF = 22 for chloride, CF = 62 for bromine, and CF = 98 for iodine (see \[[93](../references.md#93)\]).
 {% endhint %}
 
@@ -209,30 +209,30 @@ PBPK modeling requires many substance-specific parameters, which are usually unk
 
 Organ/plasma partition coefficients are based on the concept of partition coefficients between drug binding tissue constituents and water. These include lipid/water and protein/water partition coefficients. Several similar concepts for utilizing such partition coefficients and the composition of organ tissue to calculate the organ/plasma partition coefficients have been published recently (see \[[53](../references.md#53)\],and \[[86](../references.md#86)\]b for examples, an overview is given in \[[32](../references.md#32)\]). Even though the idea is very similar in all cases, they deviate in the kind of parameters that they use. In PK-Sim® there are five ways to calculate the partition coefficients for the organs: The PK-Sim® standard model, which is described in more detail below, and the approaches developed by Rodgers & Rowland, Schmitt, Poulin & Theil, and Berezhkovskiy. The mechanistic equations for the different models are found in the respective literature (\[[53](../references.md#53)\], \[[59](../references.md#59)\], \[[62](../references.md#62)\], \[[60](../references.md#60)\], \[[61](../references.md#61)\], \[[68](../references.md#68)\], \[[54](../references.md#54)\], \[[55](../references.md#55)\], \[[52](../references.md#52)\], \[[5](../references.md#5)\]). In the PK-Sim® standard model the partition coefficients are calculated using the following equation:
 
-![Partition Coefficients](images/Partition_Coefficients.png)
+![Partition Coefficients](../assets/images/part-3/Partition_Coefficients.png)
 
-with ![Image](images/Fx_organ.png) = volume fraction of water, lipid and protein, 
-![Image](images/K_lipid.png) = lipid/water partition coefficient,
+with ![Image](../assets/images/part-3/Fx_organ.png) = volume fraction of water, lipid and protein, 
+![Image](../assets/images/part-3/K_lipid.png) = lipid/water partition coefficient,
 
-![Image](images/K_protein.png) = protein/water partition coefficient,
+![Image](../assets/images/part-3/K_protein.png) = protein/water partition coefficient,
 
-![Image](images/fu_plasma.png) = free fraction in plasma.
+![Image](../assets/images/part-3/fu_plasma.png) = free fraction in plasma.
 
 Partition coefficients are derived from input data as follows:
 
-![Image](images/K_lipid.png) The value entered as Lipophilicity is directly used.
+![Image](../assets/images/part-3/K_lipid.png) The value entered as Lipophilicity is directly used.
 
-![Image](images/K_protein.png) Calculated from **Lipophilicity** using a correlation determined experimentally by measuring the unspecific binding to different tissue protein fraction of various organs for a large set of diverse compounds.
+![Image](../assets/images/part-3/K_protein.png) Calculated from **Lipophilicity** using a correlation determined experimentally by measuring the unspecific binding to different tissue protein fraction of various organs for a large set of diverse compounds.
 
-Drug partitioning between plasma and red blood cells is calculated in analogous manner to ![Drug Partitioning](images/Eq_Krbc_PKSim.png)
+Drug partitioning between plasma and red blood cells is calculated in analogous manner to ![Drug Partitioning](../assets/images/part-3/Eq_Krbc_PKSim.png)
 
 The only exceptions are the Schmitt model that additionally takes into account the amount of acidic and neutral phospholipids as well as neutral lipids, and the Rodgers & Rowland model, if experimental data for blood-to-plasma concentration ratios (B:P) are available.
         
 The equation for the calculation of Krbc in the Schmitt partition model is:
-![Drug Partitioning Schmitt](images/equation-15-4.png)
+![Drug Partitioning Schmitt](../assets/images/part-3/equation-15-4.png)
 
 If a value for B:P is used in the Rodgers & Rowland model, Krbc is calculated as follows:
-![Drug Partitioning Rodgers & Rowland](images/equation-15-5.png)
+![Drug Partitioning Rodgers & Rowland](../assets/images/part-3/equation-15-5.png)
 
 where HCT is the hematocrit and BPratio is the blood-to-plasma concentration ratio.
         
@@ -263,8 +263,8 @@ There are three different methods available in PK-Sim® to calculate the permeab
 |Permeability parameters calculation method |Description|
 |--- |---|
 |PK-Sim® Standard (default)|With the method PK-Sim® Standard, the permeability parameters are calculated from the physico-chemical properties given in the Compound Data Window. The degree of dissociation of acids and bases is not taken into account. It is assumed that this value is the same in all organs and species and that differences originate only from size-dependent surface areas.|
-|Charge dependent Schmitt |With this method, the degree of dissociation of acids and bases is taken into account assuming that the permeabilities for charged species are significantly smaller than for neutral species. The degree of dissociation is calculated from the pKa-values given for the **Compound** and the pH-values of the interstitial and intracellular spaces given. The permeabilities calculated with the method PK-Sim® Standard P0 are modified by a factor f(pKa- values, pH-value) accounting for the fractions of neutral/charged species:<br>![Image](images/ph-1.png)<br>Since the pH-values of the interstitial and intracellular space differ for some organs, the permeability in the direction interstitial space -> intracellular space can differ from the permeability in the direction intracellular -> interstitial space.|
-|Charge dependent Schmitt normalized PK-Sim®| This method calculates the permeabilities in a similar way as dependent the method Charge Dependent Schmitt with the difference, that Schmitt the permeabilities are normalized to obtain the values calculated normalized to with the method PK-Sim® Standard:<br>![Image](images/ph-2.png) <br>Thus, the permeability in the direction interstitial -> intracellular is the same as calculated with the method PK-Sim® Standard while the ratio of the permeabilities in the two directions is the same as calculated with the method Charge Dependent Schmitt.
+|Charge dependent Schmitt |With this method, the degree of dissociation of acids and bases is taken into account assuming that the permeabilities for charged species are significantly smaller than for neutral species. The degree of dissociation is calculated from the pKa-values given for the **Compound** and the pH-values of the interstitial and intracellular spaces given. The permeabilities calculated with the method PK-Sim® Standard P0 are modified by a factor f(pKa- values, pH-value) accounting for the fractions of neutral/charged species:<br>![Image](../assets/images/part-3/ph-1.png)<br>Since the pH-values of the interstitial and intracellular space differ for some organs, the permeability in the direction interstitial space -> intracellular space can differ from the permeability in the direction intracellular -> interstitial space.|
+|Charge dependent Schmitt normalized PK-Sim®| This method calculates the permeabilities in a similar way as dependent the method Charge Dependent Schmitt with the difference, that Schmitt the permeabilities are normalized to obtain the values calculated normalized to with the method PK-Sim® Standard:<br>![Image](../assets/images/part-3/ph-2.png) <br>Thus, the permeability in the direction interstitial -> intracellular is the same as calculated with the method PK-Sim® Standard while the ratio of the permeabilities in the two directions is the same as calculated with the method Charge Dependent Schmitt.
 
 ##### Specific organ permeability
         
@@ -290,7 +290,7 @@ Protein Binding Partners
 
 |Process Type| Description|Necessary Input Parameter|
 |--- |--- |
-|Specific Binding|If experimental data on binding of the compound to specific protein binding partners are available, these values also suit as input parameters.|![Image](images/k-off.png)|
+|Specific Binding|If experimental data on binding of the compound to specific protein binding partners are available, these values also suit as input parameters.|![Image](../assets/images/part-3/k-off.png)|
 
 {% hint style="note" %}
 Sometimes enzymes that catalyze a metabolic degradation process can also bind the compound at a binding site different to the catalytically active center. It is therefore possible to link an enzyme defined in the individual/species to both a metabolic and a binding process when setting up a simulation.

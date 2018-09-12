@@ -68,11 +68,11 @@ During the Parameter Identification Run you can get visual feedback about the cu
 
 For a hands on exercise, open the example project Theophylline.pksim5. You can open the folder with the example projects from the Start menu by selecting All Programs/Open Systems Pharmacology/PK-Sim/Examples.
 
-1.  In the Simulation Explorer mark the two simulations "_Kaumeier IV 208 mg fit_" and "_Kaumeier oral solution 185mg_" and select ![Image](images/ParameterIdentification.png)**Start Parameter Identification ...** from the context menu.
+1.  In the Simulation Explorer mark the two simulations "_Kaumeier IV 208 mg fit_" and "_Kaumeier oral solution 185mg_" and select ![Image](../assets/images/part-5/ParameterIdentification.png)**Start Parameter Identification ...** from the context menu.
     
 2.  A new view for _Parameter Identification 1_ is displayed and the tab **Data** is opened. On the left, the simulations with the assigned observed data are displayed. On the right, a list of mappings from outputs to observed data is displayed. For each observed data set for concentrations and fractions the corresponding output is mapped automatically (based on the Organ, Compartment, Molecule meta data).
 
-![Parameter Identification - Mapping of outputs and observed data](images/Tab_Data.png)
+![Parameter Identification - Mapping of outputs and observed data](../assets/images/part-5/Tab_Data.png)
     
 3.  Switch to the next tab **Parameters**. Here, you have to define the parameters for identification. On the left, a list of all parameters grouped by **Simulation** and **Organ** is displayed. You can reorder the list for a more convenient view:
     
@@ -94,21 +94,21 @@ For a hands on exercise, open the example project Theophylline.pksim5. You can o
     
     Enter Minimum Value 0 for both **Identification Parameters** and Maximum Value 2 Log Units for Lipophilicity and 1 for GFR fraction.
     
-    ![Parameter Identification - Definition of Identification Parameters data](images/Tab_Parameters.png)
+    ![Parameter Identification - Definition of Identification Parameters data](../assets/images/part-5/Tab_Parameters.png)
         
 4.  In the tab **Configuration** keep the default settings.
     
 5.  In the Ribbon Bar **Run & Analyze** click **Show Visual Feedback** and then Run to start the optimization.
     
-    ![Parameter Identification Ribbon data](images/PI_Ribbon.png)
+    ![Parameter Identification Ribbon data](../assets/images/part-5/PI_Ribbon.png)
     
 6.  Now the **Visual Feedback Window** shows the intermediate state during the Parameter Identification Run.
     
-    ![Parameter Identification - Visual Feedback data](images/VisualFeedback.png)
+    ![Parameter Identification - Visual Feedback data](../assets/images/part-5/VisualFeedback.png)
     
 7.  After some iterations, the run is finished and you can switch to the tab **Results**.
     
-	![Parameter Identification - Results data](images/Tab_Results.png)
+	![Parameter Identification - Results data](../assets/images/part-5/Tab_Results.png)
 
 You can transfer the optimized values for the parameters to the simulations by clicking **Transfer to Simulation**. Or you can select one of the **Analyses** views from the Parameter Identification ribbon. If you are not satisfied, you can change mapping of outputs or definition of Identification Parameters and run the Parameter Identification again.
 
@@ -195,7 +195,7 @@ If you like, you can ungroup the column Organ (via the context menu). So you get
 
 Of course, you can use other ways to filter, sort and group the list of Simulation Parameters. And you can use the Text Filter to filter by a text element in any column. Use enclosing quotation marks to search for composite strings, otherwise a search is conducted for both strings.
 
-![Text Filter in List of Simulation Parameters](images/Tab_Parameters_TextFilter.png)
+![Text Filter in List of Simulation Parameters](../assets/images/part-5/Tab_Parameters_TextFilter.png)
 
 After selection of the Identification Parameters you should define their **Minimum and Maximum Values**. With these ranges you define the solution space of the optimization problem.
 
@@ -336,7 +336,7 @@ Depending on the number of processors in your computer and the corresponding set
     
 In PK-Sim® often it is not clear, which Calculation Method is most appropriate to fit given observed data. Using the **Calculation Methods Variation** you can optimize simulations for different calculation methods e.g. for the Partition Coefficients, and compare the results.
 
-![Configuration of Calculation methods variation](images/Option_Calculation_Methods_Variation.png)
+![Configuration of Calculation methods variation](../assets/images/part-5/Option_Calculation_Methods_Variation.png)
 
 If you have more than one molecule, you can decide whether the calculation methods should be **All the same** for all molecules or if different combinations of molecules and calculation methods should be tested.
 
@@ -348,7 +348,7 @@ Also, here optimization are done in parallel as long as processors are available
     
 During the optimization run, you can view intermediate results. Click **Show Visual Feedback** in the Ribbon bar **Run & Analyze**. A new window is displayed.
     
-![Parameter Identification - Visual Feedback data](images/visual-feedback-data.jpg)
+![Parameter Identification - Visual Feedback data](../assets/images/part-5/visual-feedback-data.jpg)
     
 In this window the status of the optimization run is displayed and a table with the best and currently tested Identification Parameter values and the resulting total error.
     
@@ -360,7 +360,7 @@ You can click the button **Parameters History** to export a table with all param
 
 In case of **Multiple optimization** or **Calculation Methods Variation** the Visual Feedback window gives an overview about the status of the different optimizations. You cannot switch to the detailed Visual Feedback view here.
 
-![Visual Feedback of Calculation methods variation](images/Feedback_Calculation_Methods_Variation.png)
+![Visual Feedback of Calculation methods variation](../assets/images/part-5/Feedback_Calculation_Methods_Variation.png)
 
 ### Results of Parameter Identification‌
     
@@ -372,11 +372,11 @@ Below, you find a table with the optimal values, start values and ranges for all
 
 You can copy and paste both tables for documentation of the results e.g. to the Working Journal.
     
-![Parameter Identification - Results data](images/Tab_Results.png)
+![Parameter Identification - Results data](../assets/images/part-5/Tab_Results.png)
 
 In case of **Multiple optimization** or **Calculation Methods Variation** you can compare the identified parameter value vectors and total errors for different Calculation Methods or Start Values in the tab Results.
     
-![Result of Calculation methods variation](images/Results_Calculation_Methods_Variation.png)
+![Result of Calculation methods variation](../assets/images/part-5/Results_Calculation_Methods_Variation.png)
 
 ### Analyses‌
     
@@ -386,13 +386,13 @@ From the ribbon Run & Analyze you can select different charts to analyze the opt
     
 For the different outputs, simulation and observed data values are displayed in different colors.
 
-![Parameter Identification Analysis - Time Profile](images/PI_Analysis_TimeProfile.png)
+![Parameter Identification Analysis - Time Profile](../assets/images/part-5/PI_Analysis_TimeProfile.png)
 
 #### Predicted vs. Observed
 
 For each observed concentration value a point is plotted with observed value as x-Value and corresponding simulation value as y-Value.
 
-![Parameter Identification Analysis - Predicted vs. Observed](images/PI_Analysis_PredictedVsObserved.png)
+![Parameter Identification Analysis - Predicted vs. Observed](../assets/images/part-5/PI_Analysis_PredictedVsObserved.png)
 
 In case of different dimensions of the outputs you have to switch the x-Axis dimension to see the respective outputs.
 
@@ -400,13 +400,13 @@ In case of different dimensions of the outputs you have to switch the x-Axis dim
 
 This chart is similar to the Time Profile chart, but on the y-axis the (absolute) residuals used in the optimization are plotted. The chart includes scaling, weights and LLOQ usage and the values are dimensionless, so you can assess the actual influence of the observed data.
 
-![Parameter Identification Analysis - Residuals vs. Time](images/PI_Analysis_ResidualsVsTime.png)
+![Parameter Identification Analysis - Residuals vs. Time](../assets/images/part-5/PI_Analysis_ResidualsVsTime.png)
 
 #### Histogram of Residuals
 
 Using this chart, you can check if the residuals are distributed normally - the normal distribution is indicated by the black curve. Strong deviations from normal distribution indicate that the scaling of the parameters may not be appropriate or the model does not reflect the observed data.
 
-![Parameter Identification Analysis - Histogram of Residuals](images/PI_Analysis_HistogramResiduals.png)
+![Parameter Identification Analysis - Histogram of Residuals](../assets/images/part-5/PI_Analysis_HistogramResiduals.png)
 
 #### Correlation Matrix
 
@@ -420,9 +420,9 @@ You can use the correlation information to select the parameters to identify. In
 Keep in mind that all information in this analysis is calculated only at the optimal values and is not necessarily valid in general.
 {% endhint %}
 
-![Parameter Identification Analysis - Correlation Matrix for two identification parameters](images/PI_Analysis_CorrelationMatrix.png)
+![Parameter Identification Analysis - Correlation Matrix for two identification parameters](../assets/images/part-5/PI_Analysis_CorrelationMatrix.png)
 
-![Parameter Identification Analysis - Correlation Matrix for three identification parameters](images/PI_Analysis_CorrelationMatrix3.png)
+![Parameter Identification Analysis - Correlation Matrix for three identification parameters](../assets/images/part-5/PI_Analysis_CorrelationMatrix3.png)
 
 #### Covariance Matrix
 
@@ -432,9 +432,9 @@ The Covariance matrix gives additional statistical information and can be used t
 Keep in mind that all information in this analysis is calculated only at the optimal values and is not necessarily valid in general.
 {% endhint %}
   
-![Parameter Identification Analysis - Covariance Matrix for two identification parameters](images/PI_Analysis_CovarianceMatrix.png)
+![Parameter Identification Analysis - Covariance Matrix for two identification parameters](../assets/images/part-5/PI_Analysis_CovarianceMatrix.png)
 
-![Parameter Identification Analysis - Covariance Matrix for three identification parameters](images/PI_Analysis_CovarianceMatrix3.png)
+![Parameter Identification Analysis - Covariance Matrix for three identification parameters](../assets/images/part-5/PI_Analysis_CovarianceMatrix3.png)
 
 ### Confidence Interval‌
     
@@ -452,7 +452,7 @@ For more detailed background information about the _confidence intervals_, _mode
 
 This chart displays the 95% confidence interval of the _model error_, which is based on the uncertainty of estimated parameters. This uncertainty is based on an estimation of the error between the mean value of used observed data compared with the mean value of the (unknown) total data.
 
-![Parameter Identification - Confidence interval](images/PI_ConfidenceInterval.png)
+![Parameter Identification - Confidence interval](../assets/images/part-5/PI_ConfidenceInterval.png)
 
 #### Visual Predictive Check Interval
 
@@ -474,13 +474,13 @@ In that case you should consider to
 
 
 
-![Parameter Identification - Visual Predictive Check interval](images/PI_VPCCheckInterval.png)
+![Parameter Identification - Visual Predictive Check interval](../assets/images/part-5/PI_VPCCheckInterval.png)
 
 #### Prediction Interval
 
 This chart displays the 95% Prediction interval, which corresponds to the combination of the _model error_ and the _data error_. It shows, how much future measured data are expected to differ from the model predictions.
 
-![Parameter Identification - Prediction interval](images/PI_PredictionInterval.png)
+![Parameter Identification - Prediction interval](../assets/images/part-5/PI_PredictionInterval.png)
 
 ## More Features‌
 

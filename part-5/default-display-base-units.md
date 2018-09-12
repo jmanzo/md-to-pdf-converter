@@ -12,15 +12,15 @@ The settings are applied in the following order:
 
 *   Default Display Units
 
-![Use the Display Units toolbar in the Modeling and Simulation tab to define display units for projects and for a user](images/ChooseDisplayUnits.png)
+![Use the Display Units toolbar in the Modeling and Simulation tab to define display units for projects and for a user](../assets/images/part-5/ChooseDisplayUnits.png)
 
 The upcoming view is similar for both, display units in a project and for a user.
 
-![Choose the display unit for a dimension from the dropdown menu](images/ManageDisplayUnits.png)
+![Choose the display unit for a dimension from the dropdown menu](../assets/images/part-5/ManageDisplayUnits.png)
 
 Units can be saved and loaded to and from a xml file. New display units can be added using the **Add Unit** button and filling up the new entry in the unit table. In addition, default display units for each dimension can be defined in the **User Settings** in the **Options** toolbar. When a new entity (parameter, molecule, ...) is created, the default display unit is used automatically.
 
-![Define the default display unit for a dimension in the User Settings](images/ManageDefaultDisplayUnits.png)
+![Define the default display unit for a dimension in the User Settings](../assets/images/part-5/ManageDefaultDisplayUnits.png)
 
 If you want to update all display units to the default units, use the **Update all Display Units** button. This action will not change the value of a dimension.
 

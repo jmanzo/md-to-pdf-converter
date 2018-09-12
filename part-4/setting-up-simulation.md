@@ -34,7 +34,7 @@ A simulation can be created by:
 
 Creating a simulation opens the **Simulation Creation Wizard** in a new window as shown below
 
-![Simulation Creation Wizard](images/SimCW.png)
+![Simulation Creation Wizard](../assets/images/part-4/SimCW.png)
 
 In the first step of the simulation creation you can choose the building blocks from which the simulation will be created. Using the combobox you can browse through the existing building blocks and select the desired item. You also need to specify a unique name for the new simulation. which you may also do later in the simulation creation process.
 
@@ -42,7 +42,7 @@ In the first step of the Simulation Creation Wizard, you can also create new Mol
 
 Clicking on **Next** ![Image](../assets/icons/Next.png) will bring you to the second step of the simulation creation as depicted. Here you can edit the selected (or newly created) Molecule Start Values building block (for details see [Molecule Start Values](02-building-block-concepts.md#molecule-start-values)). You can also Save the displayed Start Values as a new Molecule Start Value building block using the ![Image](../assets/icons/Save-32x32.png) **Save Changes as new building block** button.
 
-![Simulation Creation Wizard: Edit Molecule Start Values](images/SimCW_MSV.png)
+![Simulation Creation Wizard: Edit Molecule Start Values](../assets/images/part-4/SimCW_MSV.png)
 
 Clicking on **Next** ![Image](../assets/icons/Next.png) will bring you to the third step of the Simulation Creation as shown. Here you can edit the selected (or newly created) Parameter Start Values building block (for details see [Parameter Start Values](02-building-block-concepts.md#parameter-start-values)). You can also save the displayed start values as a new parameter start value building block using the **Save Changes as new building block** button.
 
@@ -50,7 +50,7 @@ Clicking on **Next** ![Image](../assets/icons/Next.png) will bring you to the th
 Changes of start values will affect newly created simulations. Adding them to the project, will leave the original start values building blocks unaffected. **Save Changes as new building block** will create a new building block under a different name.
 {% endhint %}
 
-![Simulation Creation Wizard: Edit Parameter Start Values](images/SimCW_PSV.png)
+![Simulation Creation Wizard: Edit Parameter Start Values](../assets/images/part-4/SimCW_PSV.png)
 
 {% hint style="warning" %}
 Newly created Molecule and Parameter Start Value building blocks in step one, or Start Values building blocks saved in steps two and three during the simulation creation process will only be added to the project when the simulation creation is completed by clicking **Finish** ![Image](../assets/icons/OK.png) and not cancelled prematurely.
@@ -60,7 +60,7 @@ The third and fourth steps after clicking **Next** ![Image](../assets/icons/Next
 
 In the last step, you can choose to immediately run the simulation upon completion of the simulation creation process by selecting the checkbox ![Image](../assets/icons/Checked.png) **Run Simulation** as depicted.
 
-![Simulation Creation Wizard: Finish](images/SimCW_Finish.png)
+![Simulation Creation Wizard: Finish](../assets/images/part-4/SimCW_Finish.png)
 
 Finish the simulation creation by clicking on **OK** ![Image](../assets/icons/OK.png). MoBi® now generates the new simulation, the progress of which is visualized by a progress bar. During this process the simulation is also checked for consistency, and possible issues will be reported.
 
@@ -94,7 +94,7 @@ Error Fatal inconsistencies. In this case, the simulation cannot be created. Err
 
 You can choose if only errors, only warnings or both are displayed by clicking (activating/deactivating) the ![Image](../assets/icons/Error.png) Errors and ![Image](../assets/icons/Warning.png) Warnings buttons in the top row of the Notifications window. Warnings are grouped according to their category.
 
-![Notifications View: Warnings](images/SimCW_Warnings.png)
+![Notifications View: Warnings](../assets/images/part-4/SimCW_Warnings.png)
 
 The ![Image](../assets/icons/Warning.png) Warnings and ![Image](../assets/icons/Error.png) Errors displayed in the Notifications View can also be saved in a Log file (csv format) using the ![Image](../assets/icons/Save-32x32.png) **Save Log...** button. You may apply changes and selections to the Notifications table as for any table, see Shared Tools - Features of _Tables_, which can be helpful for longer lists. A double-click on the error mesage or the warning directly opens the editor in the corresponding building block.
 
@@ -106,7 +106,7 @@ Simulation Settings allow you to specify the resolution of the results as well a
     
 Output Intervals specify the simulation times at which simulation results are stored. In MoBi® you can specify a variable number of Output Intervals (as depicted below).
     
-![Simulation Creation Wizard: Output Intervals](images/SimCW_OI.png)
+![Simulation Creation Wizard: Output Intervals](../assets/images/part-4/SimCW_OI.png)
 
 Each Output Interval is defined by the following options:
 
@@ -118,11 +118,11 @@ Each Output Interval is defined by the following options:
     
 Each set of options defines a _separate_ simulation Output Interval 
 
-![Image](images/output-interval-end-time.png)
+![Image](../assets/images/part-4/output-interval-end-time.png)
 
 with the corresponding number of output time points
 
-![Image](images/nt-resolution.png)
+![Image](../assets/images/part-4/nt-resolution.png)
 
 Additional output intervals can be defined and added to the list by clicking on the ![Image](../assets/icons/Add.png) **Add** button to the right of the list.
 
@@ -136,7 +136,7 @@ Additional output intervals can be defined and added to the list by clicking on 
 
 The solution will be produced at the following time points for a number of _k_ Output Intervals:
 
-![Image](images/equation-26-1.png)
+![Image](../assets/images/part-4/equation-26-1.png)
 
 Special points (e.g. times of Events such as Applications) will be added automatically.
 
@@ -146,7 +146,7 @@ MoBi® uses the CVODE differential equation solver. The solver settings can be a
 For more information on the solver, please refer to the documentation of the CVODE solver: [CV_Guide.pdf] https://computation.llnl.gov/casc/sundials/documentation/cv_guide.pdf.
 {% endhint %}
 
-![Simulation Creation Wizard: ODE Solver Properties](images/SimCW_SimS.png)
+![Simulation Creation Wizard: ODE Solver Properties](../assets/images/part-4/SimCW_SimS.png)
 
 The following options can be changed by the user:
 
@@ -168,13 +168,13 @@ For some "difficult" problems, the predefined value of MxStep might be too small
 
 The parameters RelTol and AbsTol define a vector of error weights, ewt, defined as:
 
-![Image](images/equation-26-2.png)
+![Image](../assets/images/part-4/equation-26-2.png)
 
 where _y_ is a variable vector _y_ = _f_(t).
 
 This vector is used in all error and convergence tests, which use a weighted root mean square (RMS) norm on all error-like vectors _v_:
 
-![Image](images/equation-26-3.png)
+![Image](../assets/images/part-4/equation-26-3.png)
 
 | | |
 |--- |--- |
@@ -244,7 +244,7 @@ Within the **Simulation Explorer**, each building block item of the **Configurat
     
 A right click on the red traffic lights in the **Simulation** window allows for two actions:
 
-![Image](images/MoBi_UpdateCommit.png)
+![Image](../assets/images/part-4/MoBi_UpdateCommit.png)
 
 *   Update: The simulation settings (local) will be updated with the (general) settings of the building block. This is useful if you want to discard the settings of your simulation and get back to the original settings defined in the building block. Updating from a Spatial Structure or Molecule Building Block will open a dialogue that allows you to check your configuration. You may check here automatically applied changes in the Molecule Start Values and Parameter Start Values and adjust them manually.
 
@@ -321,7 +321,7 @@ The context menu that opens when right-clicking on the simulation in the Simulat
 
 In addition, simulations from one project can be merged into another project.
 
-![The merge workflow is initiated from the button in the Workflows menu](images/MergeSimulation.png)
+![The merge workflow is initiated from the button in the Workflows menu](../assets/images/part-4/MergeSimulation.png)
 
 If two building blocks of the same name are merged together, a conflict management offers the following resolution options:
 

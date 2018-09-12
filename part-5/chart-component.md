@@ -20,7 +20,7 @@ The chart editor consists of several subviews that depend on the number of tabs 
 The most frequently edited chart elements, axes and curves, can be edited directly from the chart display without using the chart editor. Just double click the axis or curve you want to edit or right click and select **Edit** from context menu.
 {% endhint %}
 
-![Data Chart](images/Overview.png)
+![Data Chart](../assets/images/part-5/Overview.png)
 
 ## General Chart Basics‌
 
@@ -66,7 +66,7 @@ Right-click on the column header to get a context menu with more options.
 
 In the figure below, data are grouped hierarchically by organ and compartment, they are sorted by molecule and filtered by the condition **Dimension = 'Concentration'**.
 
-![Data Browser](images/DataBrowser.png)
+![Data Browser](../assets/images/part-5/DataBrowser.png)
 
 To select data:
 
@@ -115,7 +115,7 @@ The most important columns are:
 
 If a row header or cell content cannot be fully displayed, the full content is shown in a tooltip when you hover with the mouse over that field, as shown below:
 
-![Curve Options](images/CurvesTable.png)
+![Curve Options](../assets/images/part-5/CurvesTable.png)
 
 ### Coloring curves with the same color‌
 
@@ -198,7 +198,7 @@ You can define the size of the exported chart in the **Chart Export Options**. T
 
 In the **Chart Export Options** tab, you can select **Preview these settings in Chart Display** to preview any changes you have made in the settings of the **Chart Export Options**. You can select **Include origin data** and show the title of the PK-Sim® or MoBi®file, the name of simulation and the date of creation beneath the Chart®, as illustrated in the image below. This can be useful for example, if you want to refer to the simulation state used in a chart in a presentation.
 
-![Chart Export Options](images/IncludeOriginData.png)
+![Chart Export Options](../assets/images/part-5/IncludeOriginData.png)
 
 You can edit the following properties of the exported chart in the tab **Chart Export Options**.
 
@@ -219,7 +219,7 @@ To zoom into the chart, do one of the following:
 
 *   Hover the mouse over the chart. A zoom symbol appears. Press the left mouse button and drag the mouse to select a rectangle. Release the mouse button to zoom into the selected rectangle.
 
-	![Image](images/ZoomRectangle.png)
+	![Image](../assets/images/part-5/ZoomRectangle.png)
 
 *   Explicitly define the range to be displayed in the Min and Max columns in the Axis Options.
 
@@ -249,11 +249,11 @@ The chart manager can be accessed directly from the chart editor after running a
 
 *   Manage Templates: brings you directly to the chart template manager that displays an overview of all settings in a template which can all be edited.
 
-![Accessing chart templates and chart manager from the chart editor](images/ChartManageTemplates1.png)
+![Accessing chart templates and chart manager from the chart editor](../assets/images/part-5/ChartManageTemplates1.png)
 
 In the chart manager, templates can be managed in the left hand side window and settings for an individual template can be edited in the two right hand side windows.
 
-![Management and editing of chart templates in the chart manager](images/ChartManageTemplates2.png)
+![Management and editing of chart templates in the chart manager](../assets/images/part-5/ChartManageTemplates2.png)
 
 The following options are available for managing templates:
 
@@ -277,7 +277,7 @@ An automated algorithm is implemented that decides which curves are selected whe
 All changes to a template or selection of output are made at the level of an individual simulation. The simulation settings for the project remain unchanged, until the user expicitly updates the changes to the project simulation settings building block using the context menu as shown below.
 {% endhint %}
 
-![Changes in the simulation setting can be committed to the settings at the project level](images/Aufnahme8.png)
+![Changes in the simulation setting can be committed to the settings at the project level](../assets/images/part-5/Aufnahme8.png)
 
 ### Selecting Editor Layouts‌
 
@@ -300,7 +300,7 @@ In this layout are stored the selected view and column settings in the subviews 
 
 As mentioned in the introduction of this section, typically one curve corresponds to a single time series in which the x-values represent the time axis and the y- values are the corresponding functional values, such as concentration.
 
-![Concentration versus Time Plot](images/Concentration_Time.png)
+![Concentration versus Time Plot](../assets/images/part-5/Concentration_Time.png)
 
 However, curves can also correspond to two time series with the same time scale. In this case, the x-values are the values of the first time series and the y-values are the values of the second time series. Thus, concentrations can be plotted against another concentration or a fraction of the dose, for example.
 
@@ -322,13 +322,13 @@ To select other x-values than the default ones, do the following (you can skip s
     
     An error symbol appears at the x-Data field, because now the x-Data and the x-axis have different dimensions, which cannot be resolved automatically.
 
-    ![Image](images/Concentration_DimensionWarning.png)
+    ![Image](../assets/images/part-5/Concentration_DimensionWarning.png)
     
 4.  Change the Dimension of the x-axis in the Axis Table to the dimension of the x-values manually.
     
 5.  Change curve or x-axis caption according to your needs. Now the concentration is plotted against the selected x-values.
     
-![Concentration versus Concentration Plot](images/Concentration_FractionDose.png)
+![Concentration versus Concentration Plot](../assets/images/part-5/Concentration_FractionDose.png)
 
 ### Chart Options in User Settings‌‌
 

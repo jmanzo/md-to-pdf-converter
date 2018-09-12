@@ -50,7 +50,7 @@ The Weibull function can be used to empirically describe the dissolution behavio
 
 When applied to drug dissolution and release from pharmaceutical dosage forms, the Weibull function expresses the accumulated fraction of the drug (m) in solution at a time t according to the following equation \[[40](../references.md#40)\].
 
-![Image](images/equation-19-1.png)
+![Image](../assets/images/part-3/equation-19-1.png)
 
 where a is the scale parameter, defining the time scale of the process, the location parameter Tlag characterizes the lag time before the onset of the dissolution or release process, and the shape parameter b characterizes the curve as either exponential (b = 1), sigmoid (b > 1), or parabolic (b < 1).
     

@@ -32,7 +32,7 @@ To import data you should do the following:
 
 Click on the **Observed Data** button to start the import component and specify the the excel file to be imported.
 
-![File Selection Dialog](images/FileSelectionDialog.png)
+![File Selection Dialog](../assets/images/part-5/FileSelectionDialog.png)
 
 {% hint style="warning" %}
 Both excel file formats (xls and xlsx) are supported and it is **not** required to have Microsoft Excel® installed on your computer.
@@ -48,7 +48,7 @@ After selection of the file to be imported, a split window appears (see screensh
 
 An estimate of the number of data tables upon import using the current mapping is given in brackets in the **Import** button. This helps the user to judge whether the specified mapping produces the desired number of data tables. The **Import All** button is used to import multiple sheets at the same time.
 
-![Preview And Mapping Dialog](images/PreviewAndMappingDialog.png)
+![Preview And Mapping Dialog](../assets/images/part-5/PreviewAndMappingDialog.png)
 
 Clicking on the **Preview Original Data** button allows the user to quickly review the original data. This might be useful in case explanatory data that is needed to perform mapping gets trimmed out during the import process. Also, in the preview of the original data, specific subsets of data can be selected for import.
 
@@ -106,7 +106,7 @@ The icons to the left of each target entry in the mapping dialog have the follow
 
 *   The ![Image](../assets/icons/IconGroupBy.png) icon indicates that the data will be split into several tables by distinct values of source column (see Using Group By in the mapping).
 
-![Mapping](images/Mapping.png)
+![Mapping](../assets/images/part-5/Mapping.png)
 
 {% hint style="tip" %}
 **Multiple Mapping**
@@ -147,7 +147,7 @@ Each required target column must be mapped onto at least one source column to en
 
 If you click the import button for a sheet that you have already imported you will be asked whether the already imported tables should be replaced by the newly imported ones, (see below).
 
-![Question: Overwrite Existing Tables](images/OverwriteExistingTables.png)
+![Question: Overwrite Existing Tables](../assets/images/part-5/OverwriteExistingTables.png)
 
 By overwriting existing tables it does not matter how many tables have been imported by the previous mapping. If you confirm the replacement all previously imported tables which are based on the current sheet are replaced. If you dis-confirm the replacement the new tables are appended. The tables get serially numbered to get unique names.
 {% endhint %}
@@ -162,7 +162,7 @@ If your source sheets are well mapped, you can use the **Import All** button to 
 
 Meta data are additional information that the calling application might request of the user. There can be meta data requested for an imported table or for each imported column (see below for an example).
 
-![Meta Data Dialog](images/MetaDataDialog.png)
+![Meta Data Dialog](../assets/images/part-5/MetaDataDialog.png)
 
 {% hint style="note" %}
 All required meta data are indicated by a yellow background color and missing or invalid values are indicated by a preceding icon. In the tool tips you can get more information on the value which is requested. Optional meta data have a white background color.
@@ -178,7 +178,7 @@ Meta data and unit information can be copied to other columns or tables either d
 
 A column unit can be set in the mapping dialog or by selecting ![Image](../assets/icons/IconUnitInformation.png) Set Unit from the context menu of a column in the imported table tab page (see Imported Table Tab Page Screenshot).
 
-![Set Unit Dialog](images/SetUnitDialog.png)
+![Set Unit Dialog](../assets/images/part-5/SetUnitDialog.png)
 
 For a column there can be multiple dimensions defined. Each dimension can have multiple units.
 
@@ -190,7 +190,7 @@ If no unit information is found in the source column, the default unit is automa
 
 A new tab page is created for each imported data file and you can enter meta data for tables or columns, set unit information or just view the imported data (see Imported Table Tab Page Screenshot). Changes to the error type or to units can be made in this view and are directly reflected in the chart.
 
-![Imported Table Tab Page](images/ImportTableTabPage.png)
+![Imported Table Tab Page](../assets/images/part-5/ImportTableTabPage.png)
 
 On the left hand side you can see all meta data of the currently selected table and their columns. You can enter the requested information directly into this area or select ![Image](../assets/icons/IconMetaData.png) **Edit Meta Data** from the context menu of a column header.
 

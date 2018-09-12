@@ -10,15 +10,15 @@ Active, protein-mediated processes involved in drug ADME generally occur simulta
 
 In brief, the concept of using gene expression data as proxy for protein abundance is based on the definition of the maximum velocity _Vmax_ _µ_mol/l/min. According to the Michaelis-Menten equation, _Vmax_ depends on both the total enzyme or transporter concentration E0 µmol/l and the catalytic rate constant _kcat_ 1/min:
 
-![Equation 14.1. Vmax](images/equation-14-1-vmax.png)
+![Equation 14.1. Vmax](../assets/images/part-3/equation-14-1-vmax.png)
 
 Assuming that kcat is not influenced by _in vivo_ factors, the tissue-specific maximum velocity _Vmax,organ_ is defined as:
 
-![Equation 14.2. Vmax, Organ](images/equation-14-2-vmax.png)
+![Equation 14.2. Vmax, Organ](../assets/images/part-3/equation-14-2-vmax.png)
 
 By replacing E0, organ by relative expression values erel,organ - times a scaling factor _SF_ µmol/l the absolute _in vivo_ protein concentration is corrected for such that organ specific activity can be rewritten to obtain:
 
-![Equation 14.3. Vmax, organ, E0, organ replaced by relative expression values](images/equation-14-3-vmax.png)
+![Equation 14.3. Vmax, organ, E0, organ replaced by relative expression values](../assets/images/part-3/equation-14-3-vmax.png)
 
 This reformulation enables automatic quantification of the organ specific activity Vmax,organ for each protein-mediated process at the whole-body scale.
         
@@ -113,7 +113,7 @@ The workflow of integrating protein data with PBPK models comprises the followin
 
 Proteins are added to a PBPK model as part of the building block individual. Proteins are added as binding partners, as metabolizing enzymes or as transporters for “compound”. The specifics of the interaction is adjusted in the compounds building block, see [PK-Sim® Compounds: Definition and Work Flows](07-pk-sim-compounds-definition-and-work-flow.md), while the quantities and localization of proteins is parameterized in the individual building block. There are two ways of adding proteins to the building block “ individual”, either via a database query using the PK-Sim® gene expression database, or through direct entering of protein quantities to a list of organs and tissues. In either case, a protein is added either as “Metabolising Enzyme”, as “Transport Protein” or as “Protein Binding Partners”. Below the tab “Expression”, you find an area that lists all possible protein ‘types’. For each type, it is possible to select via right click a context menu with two entries, **Add type… (Default)** or **Add type… (Database Query)** with type being one of “Metabolising Enzyme”, “Transport Protein” or “Protein Binding Partners”.
 
-![Expression Input Form](images/ExpressionInputForm.PNG)
+![Expression Input Form](../assets/images/part-3/ExpressionInputForm.PNG)
 
 ## Adding protein quantities manually‌
 
@@ -121,7 +121,7 @@ If you know quantities of proteins in one or several organs you can define the e
     
 Right click on this type, and select the first entry in the context menu: **Add Metabolizing Enzyme ... (Default)** (assuming you want to add an enzyme).
 
-![Expression Input Form Context Menu](images/ExpressionInputFormContextMenu.PNG)
+![Expression Input Form Context Menu](../assets/images/part-3/ExpressionInputFormContextMenu.PNG)
 
 Next, you will be required to choose a name for your protein. After doing so, an area to configure properties of this protein will appear. It is divided into an upper and a lower panel.
 
@@ -129,7 +129,7 @@ Next, you will be required to choose a name for your protein. After doing so, an
 To be able to query expression data from a database you have to select a database for the current species in PK-Sim ®options (see [PK-Sim® Options](02-pk-sim-options.md).
 {% endhint %}
 
-![Expression Data Input Form For Manually Data Input](images/ExpressionDataInputManually.PNG)
+![Expression Data Input Form For Manually Data Input](../assets/images/part-3/ExpressionDataInputManually.PNG)
 
 We will explain the upper panel in [Settings in the protein expression tab](#settings-in-the-protein-expression-tab). In the lower panel relative protein quantities per organ are specified. When adding protein quantities manually values for all organ/tissue for which estimates are available should be given as the default values are simply zero. For transporters, more options are available in the lower panel which are explained in [Settings in the protein expression tab](#settings-in-the-protein-expression-tab).
 
@@ -145,7 +145,7 @@ Next, a database query wizard will open. This is discussed in more detail in, �
         
 The first panel of the database search wizard allows you to enter a search term in the search bar
 
-![Expression Protein Selection](images/ExpressionProteinSelection.PNG)
+![Expression Protein Selection](../assets/images/part-3/ExpressionProteinSelection.PNG)
 
 This term can be anything from gene name, gene symbol, or parts of the description.
 
@@ -185,13 +185,13 @@ You can select one or several cells with the mouse (press left mouse key down), 
 
 The lower panel gives a graphical representation of the gene expression values. In the table (upper panel), the data can be filtered by several criteria. (REF: How to use the database query wizard).
     
-![Expression Data Analysis](images/ExpressionDataAnalysis.PNG)
+![Expression Data Analysis](../assets/images/part-3/ExpressionDataAnalysis.PNG)
 
 ### Reviewing data before transfer‌
 
 In the data transfer overview tab the data to be transferred are compiled for reviewing. Note, that relative expression values are given. In the upper part of the windows one or more radio buttons are displayed. The radio buttons are used to select the appropriate data source. Currently, Array, EST or RT-PCR can be selected. After selecting one of the data sources the expression levels in different PBPK containers are displayed in the lower panel. Select the most appropriate data source and click **OK** to close the database query wizard. The expression data is transferred to PK-Sim®
 
-![Expression Data Transfer](images/ExpressionDataTransfer.PNG)
+![Expression Data Transfer](../assets/images/part-3/ExpressionDataTransfer.PNG)
 
 {% hint style="tip" %}
 The Array Database is best in terms of the number of genes covered (essentially the complete genome), RT-PCR provides the most accurate measurements, and EST data in some cases covers unusual types of tissue. Use the data soures that has the most appropriate coverage of tissues for your purpose. Array data is usually a good choice.
@@ -201,7 +201,7 @@ The Array Database is best in terms of the number of genes covered (essentially 
 When using several proteins different data sources for different proteins may safely be used.
 {% endhint %}
 
-![Expression Input Form With Transferred Data](images/ExpressionInputFormAfterTransferDone.png)
+![Expression Input Form With Transferred Data](../assets/images/part-3/ExpressionInputFormAfterTransferDone.png)
 
 {% hint style="tip" %}
 The complete data set is stored within the PK-Sim® project. If you re-enter the query by selecting the **Edit...** menu item from the context menu of a defined protein, all data will be taken from the internally saved data set. To force access to the database you need to re-query the protein in the protein selection form.
@@ -275,7 +275,7 @@ In this section the more advanced features of the expression database integratio
 
 In the upper section of the “Data Analysis tab page” the expression data is compiled in a pivot table. With the help of a pivot table cross tabulations are easily possible. You can drag fields to use them as additional row or column headers. The table changes dynamically.
 
-![Expression Data Analysis Pivot Table](images/ExpressionDataAnalysisPivotTable.png)
+![Expression Data Analysis Pivot Table](../assets/images/part-3/ExpressionDataAnalysisPivotTable.png)
 
 {% hint style="tip" %}
 You can change the X-Axis field used by the corresponding chart by double clicking on a row header. This feature is only available for fields with no empty values.
@@ -291,9 +291,9 @@ You can reset all fields back to their default position by double clicking on a 
 
 ## Filtering Data‌
             
-Each field can be used for filtering. To open the filter dialog click on the filter symbol ![Image](images/ExpressionFieldFilterSymbol.png) which is shown in the field header when hovering over a field.
+Each field can be used for filtering. To open the filter dialog click on the filter symbol ![Image](../assets/images/part-3/ExpressionFieldFilterSymbol.png) which is shown in the field header when hovering over a field.
 
-![Field Filter Dialog](images/ExpressionFieldFilteringDialog.png)
+![Field Filter Dialog](../assets/images/part-3/ExpressionFieldFilteringDialog.png)
 
 By ticking the check boxes you can toggle the filtering of individual values.
             
@@ -301,18 +301,18 @@ By ticking the check boxes you can toggle the filtering of individual values.
 
 {% hint style="tip" %}
 The buttons in the upper area have the following meaning:
-*   The ![Image](images/ExpressionFieldFilterOnlyVisibleValuesSymbol.png) button can be used to limit the list of values to only those that are currently visible. If you would have added a filter on another field some values might are unreachable. Those values would be hidden.
-*   The ![Image](images/ExpressionFieldFilterOptionModeSymbol.png) button can be used to change the check box into an option box which means that you can only select one filter value at a time and that the previously selected value gets automatically deselected by selecting a new value.
-*   The ![Image](images/ExpressionFieldFilterInvertSymbol.png) button can be used to invert the selected filter values which means that every selected value gets deselected and vice versa..
+*   The ![Image](../assets/images/part-3/ExpressionFieldFilterOnlyVisibleValuesSymbol.png) button can be used to limit the list of values to only those that are currently visible. If you would have added a filter on another field some values might are unreachable. Those values would be hidden.
+*   The ![Image](../assets/images/part-3/ExpressionFieldFilterOptionModeSymbol.png) button can be used to change the check box into an option box which means that you can only select one filter value at a time and that the previously selected value gets automatically deselected by selecting a new value.
+*   The ![Image](../assets/images/part-3/ExpressionFieldFilterInvertSymbol.png) button can be used to invert the selected filter values which means that every selected value gets deselected and vice versa..
 {% endhint %}
 
 The respective active filter is shown right under the table.
 
-![Expression Data Analysis Pivot Table With Filter](images/ExpressionDataAnalysisPivotTableWithFilter.png)
+![Expression Data Analysis Pivot Table With Filter](../assets/images/part-3/ExpressionDataAnalysisPivotTableWithFilter.png)
 
 Click on **Edit Prefilter** to open a dialog for editing complex filter conditions.
 
-![Prefilter Dialog](images/ExpressionDataAnalysisPrefilter.PNG)
+![Prefilter Dialog](../assets/images/part-3/ExpressionDataAnalysisPrefilter.PNG)
 
 To add a condition for the age of the population used in the expression data measurements you can add a condition in the prefilter dialog with the following steps:
             
@@ -328,7 +328,7 @@ To add a condition for the age of the population used in the expression data mea
 
 Now the condition has changed and only data from adults will be used
 
-![Prefilter Dialog With Age Condition Added](images/ExpressionDataAnalysisPrefilterAgeCondition.PNG)
+![Prefilter Dialog With Age Condition Added](../assets/images/part-3/ExpressionDataAnalysisPrefilterAgeCondition.PNG)
 
 {% hint style="tip" %}
 For filtering age ranges of populations you might find it more convenient to use the \[Age(Minimum)\] and \[Age(Maximum)\] columns.
@@ -338,38 +338,38 @@ For filtering age ranges of populations you might find it more convenient to use
 
 A default mapping maps measured expression data of tissues to PK-Sim® containers. This mapping can be changed by users. If you double click on the value of a container or tissue the edit mapping dialog opens.
 
-![Edit Mapping Dialog (End of List)](images/ExpressionDataAnalysisEditMapping.png)
+![Edit Mapping Dialog (End of List)](../assets/images/part-3/ExpressionDataAnalysisEditMapping.png)
 
 On the left hand side of the dialog the containers with their corresponding icons are shown and on the right hand side the currently mapped tissue is shown. Blue font means that there is no expression data available for that tissue. At the end of the list all tissues are displayed for which data could be found but which are not already mapped.
 
-![Edit Mapping Dialog (End of List)](images/ExpressionDataAnalysisEditMappingEndOfList.png)
+![Edit Mapping Dialog (End of List)](../assets/images/part-3/ExpressionDataAnalysisEditMappingEndOfList.png)
 
 It is possible to map one tissue to multiple containers. For example the Small Intestine is mapped by default to several areas of the GI tract.
 
 In the navigator panel of the edit mapping dialog, the following buttons can be used:
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingGotoStart.png) button brings you to the first record.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingGotoStart.png) button brings you to the first record.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingPageUp.png) button brings you 10 records backwards.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingPageUp.png) button brings you 10 records backwards.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingPrevious.png) button brings you to the previous record.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingPrevious.png) button brings you to the previous record.
 
-*   The record counter ( ![Image](images/ExpressionDataAnalysisEditMappingRecordsCounter.png)) shows you the actual position and the total number of records.
+*   The record counter ( ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingRecordsCounter.png)) shows you the actual position and the total number of records.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingNext.png) button brings you to the next record.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingNext.png) button brings you to the next record.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingPageDown.png) button brings you 10 records forwards.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingPageDown.png) button brings you 10 records forwards.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingGotoEnd.png) button brings you to the last record.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingGotoEnd.png) button brings you to the last record.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingEdit.png) button enters the edit mode.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingEdit.png) button enters the edit mode.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingEditAccept.png) button leaves the edit mode and accepts the changes.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingEditAccept.png) button leaves the edit mode and accepts the changes.
 
-*   The ![Image](images/ExpressionDataAnalysisEditMappingEditCancel.png) button leaves the edit mode and rejects the changes.
+*   The ![Image](../assets/images/part-3/ExpressionDataAnalysisEditMappingEditCancel.png) button leaves the edit mode and rejects the changes.
 
 Even though you can accept changes in the edit mode, ultimately they will only be saved by leaving the dialog and pressing the **OK** button. Changes done within the dialog are highlighted with orange background color.
 
-![Highlighting of Changes](images/ExpressionDataAnalysisEditMappingChanges.png)
+![Highlighting of Changes](../assets/images/part-3/ExpressionDataAnalysisEditMappingChanges.png)
 
 If you want to discard all changes you can just leave the dialog with the **Cancel** button.

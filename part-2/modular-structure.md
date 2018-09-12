@@ -4,7 +4,7 @@ The modular architecture of the software platform is outlined below.
 
 Apart from the two central, graphical user interface (GUI) based software tools PK-Sim® and MoBi®, the software platform has a common core, import and export options, as well as interfaces to general computing environments, as detailed in the following.
 
-![Modular structure of the software platform (taken from \[[18](../references.md#18)\])](images/Eissing_et_al_Frontiers_2011_Figure2.jpg)
+![Modular structure of the software platform (taken from \[[18](../references.md#18)\])](../assets/images/part-2/Eissing_et_al_Frontiers_2011_Figure2.jpg)
 
 ## Common XML and solver core‌
     

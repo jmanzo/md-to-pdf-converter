@@ -58,5 +58,5 @@ Then change to an image processing program and insert the image of the chart usi
 
 Specific parts of a model can be exported as editable list into xls format. The export is done per simulation and initiated by context menu in the simulation explorer. Upon initiation of the export, the user has to specify the path for import and either use the suggested file name or else override it. The exported parts comprise reactions, molecules and parameters that will be exported into one sheet each in the export file.
 
-![Export of the simulation parts reactions, molecules and parameters as processable list is initated in the context menu](images/ExportSimulationParts.png)
+![Export of the simulation parts reactions, molecules and parameters as processable list is initated in the context menu](../assets/images/part-4/ExportSimulationParts.png)
 

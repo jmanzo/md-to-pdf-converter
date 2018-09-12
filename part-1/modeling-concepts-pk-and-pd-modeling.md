@@ -8,4 +8,4 @@ Thus, in classical pharmacokinetic modeling, the aim is to fit a comparatively s
 
 In contrast to the rather phenomenological consideration of drug PK in compartmental models, physiologically–based pharmacokinetic (PBPK) models aim for a detailed representation of physiological processes as will be summarized in the following. Consequently, PBPK-modeling is based on the mathematical description of physical and physiological processes and in the framework of PBPK modeling a genuine simulation of the pharmacokinetic behavior using this description is performed. Also, the pharmacodynamics can be represented in more mechanistic detail as briefly discussed in [Modeling Concepts - PD and Reaction Network Modeling](06-modeling-concepts-pd-and-reaction-network-modeling.md). A good starting point for further reading can be found in \[[65](../references.md#65)\].
 
-![Structure of compartmental PK model (A) and PBPK model (B)](images/Kuepfer_et_al_Adv_Exp_Med_Biol_2012_Figure4.jpg)
+![Structure of compartmental PK model (A) and PBPK model (B)](../assets/images/part-1/Kuepfer_et_al_Adv_Exp_Med_Biol_2012_Figure4.jpg)

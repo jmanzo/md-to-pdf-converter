@@ -32,7 +32,7 @@ For instance, the values of the favorite parameters and result charts can be cop
 
 To access the Working Journal, select the Tab Working Journal. Most buttons are deactivated before having created or selected a Journal for the current project file.
 
-![Journal Ribbon](images/JournalRibbonNew.png)
+![Journal Ribbon](../assets/images/part-5/JournalRibbonNew.png)
 
 To add the first Journal Page, click **Add Page**. You are asked, whether you want to open an existing Journal or to create a new one.
 
@@ -55,13 +55,13 @@ The Page is saved automatically, when closing the Editor or switching to another
 
 Additionally, you can save any time explicitly using the short cut CTRL-S or the corresponding button in the file menu.
 
-![Journal Editor window](images/JournalEditor1.png)
+![Journal Editor window](../assets/images/part-5/JournalEditor1.png)
 
 ### Journal view‌
 
 On the right side of the PK-Sim or MoBi application, the **Journal view** is shown by default. You can show and hide it like other views. In case you have removed the view, you can reopen it by clicking the corresponding button ![Image](../assets/icons/Journal-32x32.png) in the Tab **Views**.
 
-![Image](images/JournalList1.png)
+![Image](../assets/images/part-5/JournalList1.png)
 
 By default, the Journal pages are ordered by the creation date in a descending order. For each page, the unique index, the title, creation date, tags and the first characters of the text are displayed. You can select other columns with the coumn chooser to display for example the userid of the author. You can use the columns for sorting, filtering and grouping. This is helpful in particular in large projects, where different authors contributed or different project files are used.
 
@@ -75,7 +75,7 @@ At the bottom of the **Journal View**, some detail information is displayed for 
 
 After you had selected a Working Journal for your project file, all buttons in the Journal Ribbon group are active.
 
-![Image](images/JournalRibbonActive.png)
+![Image](../assets/images/part-5/JournalRibbonActive.png)
 
 In the following sections we describe the available functions.
 
@@ -131,7 +131,7 @@ To copy the visible table into the Working Journal, do the following:
     
 Alternatively, you can paste the tables also to other tools like Powerpoint® or Excel®.
     
-![Copy and paste a Table](images/CopyAndPasteTable.png)
+![Copy and paste a Table](../assets/images/part-5/CopyAndPasteTable.png)
 
 {% hint style="tip" %}    
 Use short cuts for copy (CTRL+C for Selected Rows, SHFT+CTRL+C for whole table) and paste (CTRL+V).
@@ -149,7 +149,7 @@ To copy the chart into the Working Journal, do the following
 
 Alternatively you can paste the tables also to other tools like Powerpoint® .
 
-![Copy and paste a Chart](images/CopyAndPasteChart.png)
+![Copy and paste a Chart](../assets/images/part-5/CopyAndPasteChart.png)
 
 ## Working with Related Items‌
 
@@ -161,7 +161,7 @@ To attach a Simulation or a Building Block to the active Journal Page, just sele
 
 The Simulation or Building Block is then displayed in the **Related Items** list at the bottom of the Journal view.
 
-![Image](images/RelatedItemsList.png)
+![Image](../assets/images/part-5/RelatedItemsList.png)
 
 Using the icons on the right of a **Related Item** you can
 
@@ -187,7 +187,7 @@ To search for a word or phrase do the following:
     
 Double click on a Journal Page to open the Page in the Journal Editor - the **Find Dialog** of the Editor is displayed automatically; so you can browse through the find results in the Page. (A direct navigation from the match in the Journal view is not possible.)
 
-![Image](images/JournalSearch.png)
+![Image](../assets/images/part-5/JournalSearch.png)
 
 Click the ![Image](../assets/icons/JournalSearchCloseButton.png) button on the left of the Search field to close the search area.
 
@@ -199,7 +199,7 @@ Using the **Journal Diagram**, you can visualize your working process in a more 
 
 You can find the Journal Diagram at the bottom of your PK-Sim or MoBi window. It is hidden by default. If you have removed the view, you can activate it using the button ![Image](../assets/icons/JournalDiagramButton.png) Journal Diagram in the Tab Views. There is only one unique Journal Diagram per Working Journal.
 
-![Image](images/JournalDiagram.png)
+![Image](../assets/images/part-5/JournalDiagram.png)
 
 The Journal Diagram displays green rectangular nodes for each Journal Page and blue circle nodes for each attached related item at a Journal Page. You can arrange the nodes as you like just by drag & drop. If you move a Journal Page node the connected Related Item nodes are moved, too.
 

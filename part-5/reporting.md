@@ -8,7 +8,7 @@ The content of the document is mainly specified by the place from where the acti
 
 For any report you want to create the following dialog opens for specifying the output:
 
-![Create PDF Report Dialog](images/CreatePDFReport.png)
+![Create PDF Report Dialog](../assets/images/part-5/CreatePDFReport.png)
 
 In the first part you can specify some information for the title page of the report like title, subtitle and author.
 

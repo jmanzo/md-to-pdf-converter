@@ -62,6 +62,6 @@ You can change the path to the template database or create a new template databa
     
 Within the **Application** Tab, you can specify the path to a species-specific **Expression Database** you would like to use. To do so, click on the three dots in the **Expression Database** column in the row of the species you require.
 
-![Linking a species-specific expression database to an individual.](images/expression-database-options.png)
+![Linking a species-specific expression database to an individual.](../assets/images/part-3/expression-database-options.png)
 
 The available expression databases can be downloaded from the download section http://www.systems-biology.com/uc/download.html of our web site. More information about the integration of expression data can be found at PK-Sim Express http://www.systems-biology.com/products/preview5/pk-simr-express.html

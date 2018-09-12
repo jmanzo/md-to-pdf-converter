@@ -76,7 +76,7 @@ In the main window, the molecules building block should now contain three list e
 
 To connect the molecule "Educt" as an educt of the reaction "Re", move the mouse to the edge of the molecule in the diagram area until the mouse cursor changes into a "Hand" symbol. . Click and drag your cursor towards the reaction until the appearing line snaps onto the _blue_ circle (the educt port) at the lower left end of the reaction symbol.
 
-![Reactions Building Block: Connecting Molecules to a Reaction](images/Reactions.png)
+![Reactions Building Block: Connecting Molecules to a Reaction](../assets/images/part-5/Reactions.png)
 
 Repeat this procedure for the "Product" molecule and the _green_ circle at the lower right corner of the reaction symbol, and the "Drug" Molecule and the _red_ circle at the top of the reaction symbol.
 
@@ -112,7 +112,7 @@ Now select the formula string input box to the right of the yellow warning sign 
 
 The properties tab should now look like depicted below:
 
-![Reaction Properties: Defining the Kinetics of a Reaction](images/Kinetics.png)
+![Reaction Properties: Defining the Kinetics of a Reaction](../assets/images/part-5/Kinetics.png)
 
 {% hint style="note" %}
 The color of the circles of the reaction symbol determines the sign of the kinetic formula. For molecules attached to the _blue_ circle (always the _educts_) it is negative as they are consumed. For molecules attached to the _green_ circle (always the _products_) it is positive as they are produced.
@@ -171,7 +171,7 @@ To add parameters to the reaction, go back to the properties tab. Go to the tree
 
 To add the volume parameter "V" to the list, select the bullet Relative Path. A new window appears where you can select the local reference point. Extend the tree and navigate to _Organism|Liver_. Select "Plasma" and click **OK**. Now, navigate to the same point (_Organism|Liver|Plasma_) in the tree in the "Possible Referenced Objects" window and drag & drop "Volume" into the referenced objects list. Change the **Alias** of "Volume" to "V". Your properties tab should now look like depicted below.
 
-![Reaction Properties: Defining the Kinetics of a Reaction](images/Parameters.png)
+![Reaction Properties: Defining the Kinetics of a Reaction](../assets/images/part-5/Parameters.png)
 
 ### Step 8: Define start values:
 
@@ -195,7 +195,7 @@ Before we can simulate, the reactions network of a simulation has to be created 
 
 A new simulation "RN" is added to the simulations explorer and automatically opened in edit mode in the main window. Your MoBi® program user interface should now look like depicted in below.
 
-![Create a Simulation](images/HowTo_RN_Step9.png)
+![Create a Simulation](../assets/images/part-5/HowTo_RN_Step9.png)
 
 ### Step 10: Simulate the dynamics of the newly created simulation of "RN": To run the simulation we first need to adjust the simulation settings:
 
@@ -223,4 +223,4 @@ To display the simulation results in a plot window:
 
 You can now see the simulation results in the plot, and your **Results** tab should now look as depicted below.
 
-![Simulation Results](images/HowTo_RN_Step10.png)
+![Simulation Results](../assets/images/part-5/HowTo_RN_Step10.png)

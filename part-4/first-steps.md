@@ -14,7 +14,7 @@ In this section, we give a brief overview of the MoBi® window architecture and 
 
 A typical MoBi® window looks like screenshot below. The window contains different subviews; although some of them are visible only after creating a project, we describe them right here in a comprehensive way.
 
-![MoBi® window](images/Prg_overview.png)
+![MoBi® window](../assets/images/part-4/Prg_overview.png)
 
 *   The tabs **File**, **Modeling & Simulation**, **Import/Export** etc. with a **Ribbon Bar** specific for the selected tab in the upper part of the window provide shortcuts to functions on the currently selected building block or simulation,
 
@@ -36,13 +36,13 @@ You can rearrange the window by different actions:
 
 *   Furthermore, you can drag these views and dock them to a different location. To do so, click on the title bar of the view, drag it around and drop it on one of the icons like ![Image](../assets/icons/Prg_overview_move_icon.png)
 
-![Docking a window to different positions](images/Prg_overview_drag_dock.png)
+![Docking a window to different positions](../assets/images/part-4/Prg_overview_drag_dock.png)
 
 In the following we describe some details of the different subviews.
 
 The **Modeling & Simulation ribbon bar** is separated into the **History** group, **Create Building Blocks** group, the **Simulation** group, options for specific **Workflows** and the **Project** functionality that helps to manage and display the units of parameters. **Views** contains the selection of the basic windows in MoBi®, the building block explorer window, the simulation explorer, and the history manager window.
 
-![Ribbon Bar for selection of different functionalities in MoBi®](images/Prg_overview_menu_bar.png)
+![Ribbon Bar for selection of different functionalities in MoBi®](../assets/images/part-4/Prg_overview_menu_bar.png)
 
 The **Building Block Explorer** consists of the different building blocks for Molecules, Reactions, Spatial Structures, Passive Transports, Observers, Events, Simulation Settings and the Start Values defined for Molecules and Parameters. Additionally, you may find imported observed data in the building block window. More elaborate information on the concept of building blocks with an explicit explanation of all building blocks of the MoBi® concept can be found in [The Building Block Concept](02-building-block-concepts.md).
 
@@ -74,7 +74,7 @@ You now need to create molecules which are later used as reaction partners. Do t
     
 The window should now look like this:
 
-![Molecule "A" is Created](images/NewMolecule.png)
+![Molecule "A" is Created](../assets/images/part-4/NewMolecule.png)
 
 In the same way, create a second molecule, name it "B". Also, uncheck the box ![Image](../assets/icons/Unchecked.png) **Stationary**, but this time leave the **Value** input box at its default 0. "B" will become our reaction product, so its initial amount is 0 µmol. You may also enter all these changes in one step in the "New Molecule" window together with the molecule's name prior to clicking **OK** or pressing **Enter**.
 
@@ -124,7 +124,7 @@ Try it first without making a connection by just hovering with the mouse over a 
     
 Below the Diagram Area you find a window with the three tabs **Properties**, **Stoichiometry**, and **Parameters**. Click the tab **Stoichiometry**. If the previous steps went well, you should see the molecule "A" listed in the "Educts" part with a stoichiometric coefficient of 1, and molecule "B" listed in the "Products" part, also with a stoichiometric coefficient of 1.
 
-![Reaction Stoichiometry](images/Reaction_Stoichiometry.png)
+![Reaction Stoichiometry](../assets/images/part-4/Reaction_Stoichiometry.png)
 
 Now start to create a kinetic equation; in this example assuming an irreversible first order kinetic of molecule "A" reacting to "B". To proceed, define a first order rate constant as a reaction parameter.
 
@@ -138,7 +138,7 @@ Now start to create a kinetic equation; in this example assuming an irreversible
     
 5.  Below this list, an input box with a red error symbol ![Image](../assets/icons/ErrorCross.png) is present. Enter the following formula into the input box right next to the error symbol: "A\*k1". The error sign will disappear, and the screen should look like in the figure below.
     
-![Reaction Entered Completely](images/Reaction_entered.png)
+![Reaction Entered Completely](../assets/images/part-4/Reaction_entered.png)
 
 ## Create Start Values for the Simulation‌
 
@@ -172,7 +172,7 @@ Now you are ready to create a simulation using all the generated building blocks
     
 6.  Click the green arrow ![Image](../assets/icons/Run-32x32.png) ribbon button to run the simulation, or alternatively press the **F5** key.
     
-![Simulation Wizard Window](images/Wizard.png)
+![Simulation Wizard Window](../assets/images/part-4/Wizard.png)
 
 Finally, after the computation is now done, we want to visualize the simulated results. In the simulation window, click the **Results** tab. On the right, a vertical **Chart Editor** bar is visible. Clicking it or hovering over it with the mouse pointer will bring up the possible selections for displaying the result curves.
 
@@ -186,7 +186,7 @@ The above description refers to an Editor Layout set to "Standard View". This sh
 In other layouts, if you do not see any molecules, subsequently click on the + symbols in front of compartments, like "Organ" until you will see the checkboxes for the molecules "A" and "B" .
 {% endhint %}
 
-![Simulation Result Window](images/ChartEditor.png)
+![Simulation Result Window](../assets/images/part-4/ChartEditor.png)
 
 In the Chart Options section, the chart editor allows you to select grid lines and scales. You may want to try this option as well. You can look at the kinetics curves by clicking into the chart section and making the Chart Editor disappear.
 
