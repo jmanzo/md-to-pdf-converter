@@ -39,17 +39,68 @@ function parsingMD(data) {
 	})
 }
 
+function stylingElements($) {
+	$('img[src]').each(function() {
+        var imagePath = $(this).attr('src');
+        imagePath = path.resolve(basePath, imagePath);
+
+        $(this).attr('src', 'file://' + (process.platform === 'win32' ? '/' : '') + imagePath);
+        $(this).css("max-width", "100%");
+    });
+
+    $("body").css("margin", "20px");
+
+    $("p:contains('{% hint style=\"tip\" %}')").each(function(){
+        var content = $(this).text(),
+         	contentReplaced = content.replace('{% hint style="tip" %}', '<quote style="background-color: #f3f3f3;display: block;padding:  20px;margin: 20px 0 20px 0;border-left:  3px solid blue;">');
+        contentReplaced = contentReplaced.replace('{% endhint %}', '');
+        $(this).replaceWith(contentReplaced);
+    });
+
+    $("p:contains('{% hint style=\"note\" %}')").each(function(){
+        var content = $(this).text(),
+         	contentReplaced = content.replace('{% hint style="note" %}', '<quote style="background-color: #f3f3f3;display: block;padding:  20px;margin: 20px 0 20px 0;border-left:  3px solid red;">');
+        contentReplaced = contentReplaced.replace('{% endhint %}', '');
+        $(this).replaceWith(contentReplaced);
+    });
+
+    $("p:contains('{% hint style=\"warning\" %}')").each(function(){
+     	var content = $(this).text(),
+            contentReplaced = content.replace('{% hint style="warning" %}', '<quote style="background-color: #f3f3f3;display: block;padding:  20px;margin: 20px 0 20px 0;border-left:  3px solid yellow;">');
+     	contentReplaced = contentReplaced.replace('{% endhint %}', '');
+     	$(this).replaceWith(contentReplaced);
+    });
+
+    $("p:contains('{% hint style=\"info\" %}')").each(function(){
+        var content = $(this).text(),
+            contentReplaced = content.replace('{% hint style="info" %}', '<quote style="background-color: #f3f3f3;display: block;padding:  20px;margin: 20px 0 20px 0;border-left:  3px solid green;">');
+        contentReplaced = contentReplaced.replace('{% endhint %}', '');
+        $(this).replaceWith(contentReplaced);
+    });
+
+    $("table").each(function(){
+        $(this).css("border-collapse", "collapse");
+        $(this).find("tr").css("border", "1px solid black");
+        $(this).find("td").css("border", "1px solid black");
+        $(this).find("th").css("border", "1px solid black");
+    });
+
+    console.log("*** Styles applied ***");
+
+    return $;
+}
+
 function preProcessHtml (basePath) {
   	return function() {
         return through(function(chunk, encoding, callback) {
             var $ = cheerio.load(chunk);
 
-            $('img[src]').each(function() {
-                var imagePath = $(this).attr('src');
-                imagePath = path.resolve(basePath, imagePath);
+            $ = stylingElements($);
 
-                $(this).attr('src', 'file://' + (process.platform === 'win32' ? '/' : '') + imagePath);
-            });
+            /*fs.writeFile(path.resolve(__dirname, 'debugger.html'), $.html(), function(err){
+            	if(err) console.log(err);
+            	console.log("*** debugger.html written ***");
+            }); */
 
             this.push($.html());
 
