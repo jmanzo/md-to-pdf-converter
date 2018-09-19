@@ -47,11 +47,18 @@ function parsingMD(data) {
 }
 
 function stylingElements($) {
-	$('img[src]').each(function() {
+    $("*:contains('![')").each(function(){
+        $(this).html($(this).html().replace(/(?:!\[(.*?)\]\((.*?)\))/g, function(a, b, c){
+            var replacement = "<img src='" + c + "' />";
+            return replacement;
+        }));
+    });
+
+    $('img[src]').each(function() {
         var imagePath = $(this).attr('src');
         imagePath = path.resolve(basePath, imagePath);
 
-        $(this).attr('src', 'file://' + (process.platform === 'win32' ? '/' : '') + imagePath);
+        $(this).attr('src', 'file://' + (process.platform === 'win32' ? '/' : '') + imagePath.replace('../assets/icons', 'assets/icons'));
         $(this).css("max-width", "100%");
     });
 
