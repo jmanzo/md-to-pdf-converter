@@ -34,7 +34,10 @@ function parsingMD(data) {
 		}
 	}
 
-	markdownpdf({ preProcessHtml:preProcessHtml(basePath) }).concat.from(mdDocs).to(bookPath, function () {
+	markdownpdf({ 
+		preProcessHtml:preProcessHtml(basePath),
+		paperFormat:'Letter'
+	}).concat.from(mdDocs).to(bookPath, function () {
 		console.log("PDF file created: ", bookPath)
 	})
 }
