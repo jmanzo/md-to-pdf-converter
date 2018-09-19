@@ -36,7 +36,11 @@ function parsingMD(data) {
 
 	markdownpdf({ 
 		preProcessHtml:preProcessHtml(basePath),
-		paperFormat:'Letter'
+		paperFormat:'Letter',
+        remarkable: {
+            html: false,
+            breaks: false
+        }
 	}).concat.from(mdDocs).to(bookPath, function () {
 		console.log("PDF file created: ", bookPath)
 	})
@@ -52,6 +56,23 @@ function stylingElements($) {
     });
 
     $("body").css("margin", "20px");
+
+    $("*:contains('# ')").each(function(){
+        var h1Element = $(this),
+            h1String;
+
+        if (h1Element.text().indexOf('#') == 0) {
+            h1String = h1Element.text();
+            h1Element.html(h1Element.html().replace(h1String, ''));
+            h1String = h1String.replace('# ', '');
+            h1Element.after('<br/><h1>' + h1String + '</h1>');
+
+            if (h1Element.parent('tr') || h1Element.parent('tr').parent('table')) {
+                $('table tr h1').parent().parent().parent().after('<br/><h1>' + h1String + '</h1>');
+                $('tr h1').remove();
+            }
+        }
+    });
 
     $("p:contains('{% hint style=\"tip\" %}')").each(function(){
         var content = $(this).text(),
@@ -100,10 +121,10 @@ function preProcessHtml (basePath) {
 
             $ = stylingElements($);
 
-            /*fs.writeFile(path.resolve(__dirname, 'debugger.html'), $.html(), function(err){
+            fs.writeFile(path.resolve(__dirname, 'debugger.html'), $.html(), function(err){
             	if(err) console.log(err);
             	console.log("*** debugger.html written ***");
-            }); */
+            }); 
 
             this.push($.html());
 
