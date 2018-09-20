@@ -3,3 +3,6 @@
 output/*
 
 !output/.gitkeep
+
+debugger.html
+
