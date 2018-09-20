@@ -21,6 +21,9 @@ function parsingMD(data) {
 		mdDocs = new Array(),
 		bookPath = 'output/SUMMARY.pdf';
 
+    mdDocs.push(basePath);
+    mdDocs.push('core-separator.md');
+
 	for (var i = 0; i < look.length; i++) {
 		var replacement = re.exec(look[i]);
 		
@@ -80,6 +83,8 @@ function stylingElements($) {
             }
         }
     });
+
+    $("pre").remove();
 
     $("p:contains('{% hint style=\"tip\" %}')").each(function(){
         var content = $(this).text(),
