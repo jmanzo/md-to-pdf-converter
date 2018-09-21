@@ -121,6 +121,15 @@ function stylingElements($) {
         $(this).find("th").css("border", "1px solid black");
     });
 
+    // Transform the .md paths to id/h1 elements in the link tag
+    $("a").each(function(){
+        var originalTag = $(this),
+            textTag = originalTag.text();
+
+        originalTag.after("<strong>" + textTag + "</strong>");
+        originalTag.remove();
+    });
+
     console.log("*** Styles applied ***");
 
     return $;
