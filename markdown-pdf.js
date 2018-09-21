@@ -57,14 +57,6 @@ function stylingElements($) {
         }));
     });
 
-    $('img[src]').each(function() {
-        var imagePath = $(this).attr('src');
-        imagePath = path.resolve(basePath, imagePath);
-
-        $(this).attr('src', 'file://' + (process.platform === 'win32' ? '/' : '') + imagePath.replace('../assets/icons', 'assets/icons'));
-        $(this).css("max-width", "100%");
-    });
-
     $("body").css("margin", "20px");
 
     $("*:contains('# ')").each(function(){
@@ -81,6 +73,18 @@ function stylingElements($) {
                 $('table tr h1').parent().parent().parent().after('<br/><h1>' + h1String + '</h1>');
                 $('tr h1').remove();
             }
+        }
+    });
+
+    $('img[src]').each(function() {
+        var imagePath = $(this).attr('src');
+        imagePath = path.resolve(basePath, imagePath);
+
+        $(this).attr('src', 'file://' + (process.platform === 'win32' ? '/' : '') + imagePath.replace('../assets/icons', 'assets/icons'));
+        $(this).css("max-width", "100%");
+
+        if (altImage !== undefined && altImage !== "Image") {
+            $(this).parent().after("<div style='text-align: center; color: #808080; font-style: italic;'>" + $(this).attr("alt") + "</div>");
         }
     });
 
